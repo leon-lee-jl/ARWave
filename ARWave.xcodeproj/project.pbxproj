@@ -14,9 +14,11 @@
 		35CB8E7D203EB1DF00C26B4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35CB8E7C203EB1DF00C26B4F /* Assets.xcassets */; };
 		35CB8E80203EB1DF00C26B4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35CB8E7E203EB1DF00C26B4F /* LaunchScreen.storyboard */; };
 		35CB8E8E203EC18900C26B4F /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 35CB8E8D203EC18900C26B4F /* Inceptionv3.mlmodel */; };
+		DB668AD275E45D2A5527A115 /* Pods_ARWave.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27A45ED09962CB784575B597 /* Pods_ARWave.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27A45ED09962CB784575B597 /* Pods_ARWave.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARWave.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		35CB8E70203EB1DF00C26B4F /* ARWave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARWave.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35CB8E73203EB1DF00C26B4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35CB8E75203EB1DF00C26B4F /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -26,6 +28,8 @@
 		35CB8E7F203EB1DF00C26B4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35CB8E81203EB1DF00C26B4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35CB8E8D203EC18900C26B4F /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
+		42048FB4C265B8B923CF12F2 /* Pods-ARWave.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARWave.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARWave/Pods-ARWave.release.xcconfig"; sourceTree = "<group>"; };
+		422A84695E8DC0D19A5296F9 /* Pods-ARWave.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARWave.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARWave/Pods-ARWave.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB668AD275E45D2A5527A115 /* Pods_ARWave.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				35CB8E72203EB1DF00C26B4F /* ARWave */,
 				35CB8E71203EB1DF00C26B4F /* Products */,
+				3A15C7ADA6131DD00681AE74 /* Pods */,
+				F07D05B3D7D5944864203B00 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +77,23 @@
 			path = ARWave;
 			sourceTree = "<group>";
 		};
+		3A15C7ADA6131DD00681AE74 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				422A84695E8DC0D19A5296F9 /* Pods-ARWave.debug.xcconfig */,
+				42048FB4C265B8B923CF12F2 /* Pods-ARWave.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F07D05B3D7D5944864203B00 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27A45ED09962CB784575B597 /* Pods_ARWave.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 35CB8E84203EB1DF00C26B4F /* Build configuration list for PBXNativeTarget "ARWave" */;
 			buildPhases = (
+				193D80EA44839BD0860E766D /* [CP] Check Pods Manifest.lock */,
 				35CB8E6C203EB1DF00C26B4F /* Sources */,
 				35CB8E6D203EB1DF00C26B4F /* Frameworks */,
 				35CB8E6E203EB1DF00C26B4F /* Resources */,
+				BE0E8102E0C5D957DBA7D1C0 /* [CP] Embed Pods Frameworks */,
+				03C97AA1091F38135D6A2631 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -137,6 +164,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03C97AA1091F38135D6A2631 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ARWave/Pods-ARWave-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		193D80EA44839BD0860E766D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ARWave-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE0E8102E0C5D957DBA7D1C0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ARWave/Pods-ARWave-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ImageSlideshow/ImageSlideshow.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageSlideshow.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ARWave/Pods-ARWave-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		35CB8E6C203EB1DF00C26B4F /* Sources */ = {
@@ -280,6 +361,7 @@
 		};
 		35CB8E85203EB1DF00C26B4F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 422A84695E8DC0D19A5296F9 /* Pods-ARWave.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -295,6 +377,7 @@
 		};
 		35CB8E86203EB1DF00C26B4F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42048FB4C265B8B923CF12F2 /* Pods-ARWave.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
