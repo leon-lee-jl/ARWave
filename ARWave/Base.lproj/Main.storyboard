@@ -13,28 +13,30 @@
         <!--Welcome-->
         <scene sceneID="rQ2-b4-fbC">
             <objects>
-                <viewController title="Welcome" id="dYR-8Z-lPK" sceneMemberID="viewController">
+                <viewController title="Welcome" id="dYR-8Z-lPK" customClass="WelcomeViewController" customModule="ARWave" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="COy-n5-yl3">
                         <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="This is Welcome Scene" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VyF-hh-rtf">
-                                <rect key="frame" x="256" y="162" width="248" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUX-N0-LXd">
-                                <rect key="frame" x="390" y="306" width="46" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Loe-Y6-W9u">
+                                <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rW1-ay-clf">
+                                <rect key="frame" x="598" y="270" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="BV1-FR-VrT" kind="show" id="BUP-EL-VJW"/>
+                                    <segue destination="BV1-FR-VrT" kind="show" id="g20-TG-ASL"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Loe-Y6-W9u" firstAttribute="top" secondItem="XCw-DN-wTG" secondAttribute="top" id="Twh-Rv-DkF"/>
+                            <constraint firstItem="XCw-DN-wTG" firstAttribute="trailing" secondItem="Loe-Y6-W9u" secondAttribute="trailing" id="fTj-iM-V6k"/>
+                            <constraint firstItem="XCw-DN-wTG" firstAttribute="bottom" secondItem="Loe-Y6-W9u" secondAttribute="bottom" id="qkB-cb-Mi2"/>
+                            <constraint firstItem="Loe-Y6-W9u" firstAttribute="leading" secondItem="XCw-DN-wTG" secondAttribute="leading" id="usz-5G-FrG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="XCw-DN-wTG"/>
                     </view>
                 </viewController>
@@ -92,4 +94,7 @@
             <point key="canvasLocation" x="140" y="137.18140929535232"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="1920" height="1080"/>
+    </resources>
 </document>

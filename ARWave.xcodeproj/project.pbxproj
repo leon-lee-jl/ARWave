@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		35CB8E74203EB1DF00C26B4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CB8E73203EB1DF00C26B4F /* AppDelegate.swift */; };
 		35CB8E76203EB1DF00C26B4F /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 35CB8E75203EB1DF00C26B4F /* art.scnassets */; };
-		35CB8E78203EB1DF00C26B4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CB8E77203EB1DF00C26B4F /* ViewController.swift */; };
 		35CB8E7B203EB1DF00C26B4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35CB8E79203EB1DF00C26B4F /* Main.storyboard */; };
-		35CB8E7D203EB1DF00C26B4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35CB8E7C203EB1DF00C26B4F /* Assets.xcassets */; };
 		35CB8E80203EB1DF00C26B4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35CB8E7E203EB1DF00C26B4F /* LaunchScreen.storyboard */; };
-		35CB8E8E203EC18900C26B4F /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 35CB8E8D203EC18900C26B4F /* Inceptionv3.mlmodel */; };
+		35D49C56203F1C7E00D0338A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35D49C55203F1C7E00D0338A /* Images.xcassets */; };
+		35D49C58203F233300D0338A /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 35D49C57203F233300D0338A /* Inceptionv3.mlmodel */; };
+		35D49C5C203F2B6D00D0338A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D49C5B203F2B6D00D0338A /* WelcomeViewController.swift */; };
+		35D49C60203F2CB700D0338A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D49C5F203F2CB700D0338A /* ViewController.swift */; };
 		DB668AD275E45D2A5527A115 /* Pods_ARWave.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27A45ED09962CB784575B597 /* Pods_ARWave.framework */; };
 /* End PBXBuildFile section */
 
@@ -22,12 +23,13 @@
 		35CB8E70203EB1DF00C26B4F /* ARWave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARWave.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35CB8E73203EB1DF00C26B4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35CB8E75203EB1DF00C26B4F /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
-		35CB8E77203EB1DF00C26B4F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		35CB8E7A203EB1DF00C26B4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		35CB8E7C203EB1DF00C26B4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35CB8E7F203EB1DF00C26B4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35CB8E81203EB1DF00C26B4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		35CB8E8D203EC18900C26B4F /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
+		35D49C55203F1C7E00D0338A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		35D49C57203F233300D0338A /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
+		35D49C5B203F2B6D00D0338A /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		35D49C5F203F2CB700D0338A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		42048FB4C265B8B923CF12F2 /* Pods-ARWave.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARWave.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARWave/Pods-ARWave.release.xcconfig"; sourceTree = "<group>"; };
 		422A84695E8DC0D19A5296F9 /* Pods-ARWave.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARWave.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARWave/Pods-ARWave.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,14 +67,15 @@
 		35CB8E72203EB1DF00C26B4F /* ARWave */ = {
 			isa = PBXGroup;
 			children = (
+				35D49C5F203F2CB700D0338A /* ViewController.swift */,
+				35D49C57203F233300D0338A /* Inceptionv3.mlmodel */,
 				35CB8E73203EB1DF00C26B4F /* AppDelegate.swift */,
 				35CB8E75203EB1DF00C26B4F /* art.scnassets */,
-				35CB8E77203EB1DF00C26B4F /* ViewController.swift */,
 				35CB8E79203EB1DF00C26B4F /* Main.storyboard */,
-				35CB8E7C203EB1DF00C26B4F /* Assets.xcassets */,
+				35D49C55203F1C7E00D0338A /* Images.xcassets */,
 				35CB8E7E203EB1DF00C26B4F /* LaunchScreen.storyboard */,
 				35CB8E81203EB1DF00C26B4F /* Info.plist */,
-				35CB8E8D203EC18900C26B4F /* Inceptionv3.mlmodel */,
+				35D49C5B203F2B6D00D0338A /* WelcomeViewController.swift */,
 			);
 			path = ARWave;
 			sourceTree = "<group>";
@@ -157,8 +160,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				35CB8E76203EB1DF00C26B4F /* art.scnassets in Resources */,
+				35D49C56203F1C7E00D0338A /* Images.xcassets in Resources */,
 				35CB8E80203EB1DF00C26B4F /* LaunchScreen.storyboard in Resources */,
-				35CB8E7D203EB1DF00C26B4F /* Assets.xcassets in Resources */,
 				35CB8E7B203EB1DF00C26B4F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,8 +227,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35CB8E78203EB1DF00C26B4F /* ViewController.swift in Sources */,
-				35CB8E8E203EC18900C26B4F /* Inceptionv3.mlmodel in Sources */,
+				35D49C5C203F2B6D00D0338A /* WelcomeViewController.swift in Sources */,
+				35D49C58203F233300D0338A /* Inceptionv3.mlmodel in Sources */,
+				35D49C60203F2CB700D0338A /* ViewController.swift in Sources */,
 				35CB8E74203EB1DF00C26B4F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
