@@ -18,27 +18,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Loe-Y6-W9u">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pxu-lt-di1" customClass="ImageSlideshow" customModule="ImageSlideshow">
                                 <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rW1-ay-clf">
-                                <rect key="frame" x="598" y="270" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="BV1-FR-VrT" kind="show" id="g20-TG-ASL"/>
-                                </connections>
-                            </button>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Loe-Y6-W9u" firstAttribute="top" secondItem="XCw-DN-wTG" secondAttribute="top" id="Twh-Rv-DkF"/>
-                            <constraint firstItem="XCw-DN-wTG" firstAttribute="trailing" secondItem="Loe-Y6-W9u" secondAttribute="trailing" id="fTj-iM-V6k"/>
-                            <constraint firstItem="XCw-DN-wTG" firstAttribute="bottom" secondItem="Loe-Y6-W9u" secondAttribute="bottom" id="qkB-cb-Mi2"/>
-                            <constraint firstItem="Loe-Y6-W9u" firstAttribute="leading" secondItem="XCw-DN-wTG" secondAttribute="leading" id="usz-5G-FrG"/>
+                            <constraint firstItem="Pxu-lt-di1" firstAttribute="top" secondItem="XCw-DN-wTG" secondAttribute="top" id="Kak-x7-nyw"/>
+                            <constraint firstItem="Pxu-lt-di1" firstAttribute="leading" secondItem="XCw-DN-wTG" secondAttribute="leading" id="bet-1U-VUJ"/>
+                            <constraint firstItem="XCw-DN-wTG" firstAttribute="trailing" secondItem="Pxu-lt-di1" secondAttribute="trailing" id="dy7-Zh-i35"/>
+                            <constraint firstItem="XCw-DN-wTG" firstAttribute="bottom" secondItem="Pxu-lt-di1" secondAttribute="bottom" id="pOo-Hf-0xh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XCw-DN-wTG"/>
                     </view>
+                    <connections>
+                        <outlet property="slideshow" destination="Pxu-lt-di1" id="9B7-M8-T82"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="59T-MN-RbE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -94,7 +90,4 @@
             <point key="canvasLocation" x="140" y="137.18140929535232"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="background" width="1920" height="1080"/>
-    </resources>
 </document>
