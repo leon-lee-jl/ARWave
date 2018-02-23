@@ -11,6 +11,7 @@ import ImageSlideshow
 
 class WelcomeViewController: UIViewController {
     
+    @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var slideshow: ImageSlideshow!
     
     let localSource = [ImageSource(imageString: "welcome_1")!, ImageSource(imageString: "welcome_2")!, ImageSource(imageString: "welcome_3")!]
@@ -20,8 +21,9 @@ class WelcomeViewController: UIViewController {
     let kingfisherSource = [KingfisherSource(urlString: "https://images.unsplash.com/photo-1432679963831-2dab49187847?w=1080")!, KingfisherSource(urlString: "https://images.unsplash.com/photo-1447746249824-4be4e1b76d66?w=1080")!, KingfisherSource(urlString: "https://images.unsplash.com/photo-1463595373836-6e0b0a8ee322?w=1080")!]
     
     override func viewDidLoad() {
+        self.startButton.isHidden = true
         super.viewDidLoad()
-//        slideshow.backgroundColor = UIColor(red: (235/255.0), green: (224/255.0), blue: (196/255.0), alpha: 1.0)
+        slideshow.backgroundColor = UIColor(red: (235/255.0), green: (224/255.0), blue: (196/255.0), alpha: 1.0)
         slideshow.slideshowInterval = 0
         slideshow.circular = false
         slideshow.pageControlPosition = PageControlPosition.insideScrollView
@@ -33,11 +35,10 @@ class WelcomeViewController: UIViewController {
         slideshow.activityIndicator = DefaultActivityIndicator()
         slideshow.currentPageChanged = { page in
             print("current page:", page)
-            if (page == 2) {
-//                print("I am in page 3")
-                let swipeRecognizer = UISwipeGestureRecognizer(target: self, action:)
-                
-                
+            if (page != 2) {
+                self.startButton.isHidden = true
+            } else {
+                self.startButton.isHidden = false
             }
         }
         

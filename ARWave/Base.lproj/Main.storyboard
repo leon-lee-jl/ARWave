@@ -22,18 +22,28 @@
                                 <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tjB-AJ-ZxX" colorLabel="IBBuiltInLabel-Red">
+                                <rect key="frame" x="272.66666666666669" y="250" width="192" height="44"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <state key="normal" title="Start the Journey">
+                                    <color key="titleColor" red="0.40000000000000002" green="0.40392156862745099" blue="0.40784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="tjB-AJ-ZxX" firstAttribute="centerX" secondItem="XCw-DN-wTG" secondAttribute="centerX" id="Fpd-JK-Cxc"/>
                             <constraint firstItem="Pxu-lt-di1" firstAttribute="top" secondItem="XCw-DN-wTG" secondAttribute="top" id="Kak-x7-nyw"/>
                             <constraint firstItem="Pxu-lt-di1" firstAttribute="leading" secondItem="XCw-DN-wTG" secondAttribute="leading" id="bet-1U-VUJ"/>
                             <constraint firstItem="XCw-DN-wTG" firstAttribute="trailing" secondItem="Pxu-lt-di1" secondAttribute="trailing" id="dy7-Zh-i35"/>
+                            <constraint firstItem="tjB-AJ-ZxX" firstAttribute="top" secondItem="XCw-DN-wTG" secondAttribute="top" constant="250" id="edw-4v-I2P"/>
                             <constraint firstItem="XCw-DN-wTG" firstAttribute="bottom" secondItem="Pxu-lt-di1" secondAttribute="bottom" id="pOo-Hf-0xh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XCw-DN-wTG"/>
                     </view>
                     <connections>
                         <outlet property="slideshow" destination="Pxu-lt-di1" id="9B7-M8-T82"/>
+                        <outlet property="startButton" destination="tjB-AJ-ZxX" id="fzY-u4-5mZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="59T-MN-RbE" userLabel="First Responder" sceneMemberID="firstResponder"/>
