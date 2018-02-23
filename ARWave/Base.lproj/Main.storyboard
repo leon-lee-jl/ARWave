@@ -28,6 +28,9 @@
                                 <state key="normal" title="Start the Journey">
                                     <color key="titleColor" red="0.40000000000000002" green="0.40392156862745099" blue="0.40784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Yps-21-Ugu" kind="show" id="WOQ-zK-3Fj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -50,10 +53,58 @@
             </objects>
             <point key="canvasLocation" x="-587.77173913043487" y="136.23188405797103"/>
         </scene>
-        <!--View Controller-->
+        <!--Main-->
+        <scene sceneID="ZTa-Rt-U86">
+            <objects>
+                <viewController title="Main" id="Yps-21-Ugu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZE3-Qj-XE0">
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background1" translatesAutoresizingMaskIntoConstraints="NO" id="VuA-zN-fQl">
+                                <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6k-le-Xjs">
+                                <rect key="frame" x="425" y="170" width="260" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <state key="normal" title="Practice Drill">
+                                    <color key="titleColor" red="0.40000000000000002" green="0.4039215686" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Tah-jn-cnh" kind="show" id="neL-Y5-dcL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nD7-uA-PpO">
+                                <rect key="frame" x="40" y="151" width="281" height="111"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <state key="normal" title="Secure Furiture">
+                                    <color key="titleColor" red="0.40000000000000002" green="0.4039215686" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BV1-FR-VrT" kind="show" id="VvW-TW-rNS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ftx-L4-NsI" firstAttribute="trailing" secondItem="VuA-zN-fQl" secondAttribute="trailing" id="20n-SH-N0T"/>
+                            <constraint firstItem="VuA-zN-fQl" firstAttribute="leading" secondItem="ftx-L4-NsI" secondAttribute="leading" id="REc-3v-U5V"/>
+                            <constraint firstItem="VuA-zN-fQl" firstAttribute="top" secondItem="ftx-L4-NsI" secondAttribute="top" id="l9L-he-BPX"/>
+                            <constraint firstItem="ftx-L4-NsI" firstAttribute="bottom" secondItem="VuA-zN-fQl" secondAttribute="bottom" id="sMd-Ui-SVQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ftx-L4-NsI"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HGP-HS-ABQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="107.60869565217392" y="134.78260869565219"/>
+        </scene>
+        <!--Secure Furniture-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="ARWave" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Secure Furniture" id="BV1-FR-VrT" customClass="ViewController" customModule="ARWave" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tix-nH-sfG">
                         <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -97,7 +148,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="137.18140929535232"/>
+            <point key="canvasLocation" x="852" y="-233"/>
+        </scene>
+        <!--Practice Drill-->
+        <scene sceneID="vtV-Zi-Ij2">
+            <objects>
+                <viewController title="Practice Drill" id="Tah-jn-cnh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fto-wH-hLg">
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="kXY-tW-H7o"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZAN-vV-zxk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="852" y="561"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background1" width="2208" height="1242"/>
+    </resources>
 </document>
