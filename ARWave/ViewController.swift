@@ -13,7 +13,7 @@ import ARKit
 import Vision
 
 class ViewController: UIViewController, ARSCNViewDelegate {
-    
+
     // SCENE
     @IBOutlet var sceneView: ARSCNView!
     let bubbleDepth : Float = 0.01 // the 'depth' of 3D text
