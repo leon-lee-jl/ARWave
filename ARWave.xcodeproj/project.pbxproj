@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35AE706620512AF1004A84B7 /* HaveFunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AE706520512AF1004A84B7 /* HaveFunViewController.swift */; };
+		35AE706A2052E7CD004A84B7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35AE70692052E7CD004A84B7 /* Images.xcassets */; };
 		35CB8E74203EB1DF00C26B4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CB8E73203EB1DF00C26B4F /* AppDelegate.swift */; };
 		35CB8E76203EB1DF00C26B4F /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 35CB8E75203EB1DF00C26B4F /* art.scnassets */; };
 		35CB8E7B203EB1DF00C26B4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35CB8E79203EB1DF00C26B4F /* Main.storyboard */; };
@@ -14,14 +16,14 @@
 		35D49C58203F233300D0338A /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 35D49C57203F233300D0338A /* Inceptionv3.mlmodel */; };
 		35D49C5C203F2B6D00D0338A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D49C5B203F2B6D00D0338A /* WelcomeViewController.swift */; };
 		35D49C60203F2CB700D0338A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D49C5F203F2CB700D0338A /* ViewController.swift */; };
-		35DE3018203F83FE00ED5976 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35DE3017203F83FE00ED5976 /* Images.xcassets */; };
-		35F27F60204A7A6B006D4A10 /* SelfieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F27F5F204A7A6B006D4A10 /* SelfieViewController.swift */; };
 		35F27F64204A9162006D4A10 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F27F63204A9162006D4A10 /* MainViewController.swift */; };
 		DB668AD275E45D2A5527A115 /* Pods_ARWave.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27A45ED09962CB784575B597 /* Pods_ARWave.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		27A45ED09962CB784575B597 /* Pods_ARWave.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARWave.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		35AE706520512AF1004A84B7 /* HaveFunViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaveFunViewController.swift; sourceTree = "<group>"; };
+		35AE70692052E7CD004A84B7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		35CB8E70203EB1DF00C26B4F /* ARWave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARWave.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35CB8E73203EB1DF00C26B4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35CB8E75203EB1DF00C26B4F /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -31,8 +33,6 @@
 		35D49C57203F233300D0338A /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
 		35D49C5B203F2B6D00D0338A /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		35D49C5F203F2CB700D0338A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		35DE3017203F83FE00ED5976 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		35F27F5F204A7A6B006D4A10 /* SelfieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfieViewController.swift; sourceTree = "<group>"; };
 		35F27F63204A9162006D4A10 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		42048FB4C265B8B923CF12F2 /* Pods-ARWave.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARWave.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARWave/Pods-ARWave.release.xcconfig"; sourceTree = "<group>"; };
 		422A84695E8DC0D19A5296F9 /* Pods-ARWave.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARWave.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARWave/Pods-ARWave.debug.xcconfig"; sourceTree = "<group>"; };
@@ -55,7 +55,6 @@
 			children = (
 				35CB8E72203EB1DF00C26B4F /* ARWave */,
 				35CB8E71203EB1DF00C26B4F /* Products */,
-				35DE3017203F83FE00ED5976 /* Images.xcassets */,
 				3A15C7ADA6131DD00681AE74 /* Pods */,
 				F07D05B3D7D5944864203B00 /* Frameworks */,
 			);
@@ -75,13 +74,14 @@
 				35D49C5F203F2CB700D0338A /* ViewController.swift */,
 				35D49C57203F233300D0338A /* Inceptionv3.mlmodel */,
 				35CB8E73203EB1DF00C26B4F /* AppDelegate.swift */,
-				35CB8E75203EB1DF00C26B4F /* art.scnassets */,
 				35CB8E79203EB1DF00C26B4F /* Main.storyboard */,
+				35AE706520512AF1004A84B7 /* HaveFunViewController.swift */,
 				35CB8E7E203EB1DF00C26B4F /* LaunchScreen.storyboard */,
 				35F27F63204A9162006D4A10 /* MainViewController.swift */,
 				35CB8E81203EB1DF00C26B4F /* Info.plist */,
 				35D49C5B203F2B6D00D0338A /* WelcomeViewController.swift */,
-				35F27F5F204A7A6B006D4A10 /* SelfieViewController.swift */,
+				35CB8E75203EB1DF00C26B4F /* art.scnassets */,
+				35AE70692052E7CD004A84B7 /* Images.xcassets */,
 			);
 			path = ARWave;
 			sourceTree = "<group>";
@@ -166,7 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35CB8E76203EB1DF00C26B4F /* art.scnassets in Resources */,
-				35DE3018203F83FE00ED5976 /* Images.xcassets in Resources */,
+				35AE706A2052E7CD004A84B7 /* Images.xcassets in Resources */,
 				35CB8E80203EB1DF00C26B4F /* LaunchScreen.storyboard in Resources */,
 				35CB8E7B203EB1DF00C26B4F /* Main.storyboard in Resources */,
 			);
@@ -219,6 +219,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/ImageSlideshow/ImageSlideshow.framework",
+				"${BUILT_PRODUCTS_DIR}/JJFloatingActionButton/JJFloatingActionButton.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
@@ -228,6 +229,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageSlideshow.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JJFloatingActionButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
@@ -247,7 +249,7 @@
 				35D49C58203F233300D0338A /* Inceptionv3.mlmodel in Sources */,
 				35D49C60203F2CB700D0338A /* ViewController.swift in Sources */,
 				35F27F64204A9162006D4A10 /* MainViewController.swift in Sources */,
-				35F27F60204A7A6B006D4A10 /* SelfieViewController.swift in Sources */,
+				35AE706620512AF1004A84B7 /* HaveFunViewController.swift in Sources */,
 				35CB8E74203EB1DF00C26B4F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

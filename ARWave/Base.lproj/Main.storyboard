@@ -90,6 +90,9 @@
                                 <rect key="frame" x="520" y="318" width="94" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Have fun"/>
+                                <connections>
+                                    <segue destination="2zm-iT-zej" kind="show" id="z7d-Vp-ZPW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -170,16 +173,77 @@
                     <view key="view" contentMode="scaleToFill" id="fto-wH-hLg">
                         <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tcg-kq-UlA">
+                                <rect key="frame" x="457" y="81" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="Ef7-nh-Gjv" kind="unwind" unwindAction="unwindSegue:" id="8EA-LY-VVn"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="kXY-tW-H7o"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZAN-vV-zxk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Ef7-nh-Gjv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="852" y="477"/>
+            <point key="canvasLocation" x="851.9021739130435" y="476.81159420289856"/>
+        </scene>
+        <!--Have Fun-->
+        <scene sceneID="rSx-Xj-reP">
+            <objects>
+                <viewController title="Have Fun" id="2zm-iT-zej" customClass="HaveFunViewController" customModule="ARWave" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d3P-ct-a70">
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sA5-VA-xwd">
+                                <rect key="frame" x="0.0" y="41" width="736" height="373"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5A-Nk-zPp">
+                                <rect key="frame" x="80" y="3" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="KC4-Tj-cwU" kind="unwind" unwindAction="unwindSegue:" id="10E-Jg-WTM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxp-MC-lC7">
+                                <rect key="frame" x="344" y="355" width="48" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="add"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMp-Bc-8fD">
+                                <rect key="frame" x="42" y="355" width="48" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" image="shutter"/>
+                                <connections>
+                                    <action selector="takeScreenshot:" destination="2zm-iT-zej" eventType="touchUpInside" id="E4S-h4-ZmX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="rWf-a0-53T"/>
+                    </view>
+                    <connections>
+                        <outlet property="haveFunSceneView" destination="sA5-VA-xwd" id="qHL-1S-sci"/>
+                        <outlet property="screenshotButton" destination="dMp-Bc-8fD" id="UOm-ZW-zu2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oBa-it-aCH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="KC4-Tj-cwU" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="851.9021739130435" y="1211.5942028985507"/>
         </scene>
     </scenes>
     <resources>
+        <image name="add" width="48" height="48"/>
         <image name="background1" width="2208" height="1242"/>
+        <image name="shutter" width="48" height="48"/>
     </resources>
 </document>
