@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		356CC58620535651004E216F /* my_model.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 356CC58520535651004E216F /* my_model.mlmodel */; };
 		35AE706620512AF1004A84B7 /* HaveFunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AE706520512AF1004A84B7 /* HaveFunViewController.swift */; };
 		35AE706A2052E7CD004A84B7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35AE70692052E7CD004A84B7 /* Images.xcassets */; };
 		35CB8E74203EB1DF00C26B4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CB8E73203EB1DF00C26B4F /* AppDelegate.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		27A45ED09962CB784575B597 /* Pods_ARWave.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARWave.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		356CC58520535651004E216F /* my_model.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = my_model.mlmodel; sourceTree = "<group>"; };
 		35AE706520512AF1004A84B7 /* HaveFunViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaveFunViewController.swift; sourceTree = "<group>"; };
 		35AE70692052E7CD004A84B7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		35CB8E70203EB1DF00C26B4F /* ARWave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARWave.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,14 +74,15 @@
 			isa = PBXGroup;
 			children = (
 				35D49C5F203F2CB700D0338A /* ViewController.swift */,
-				35D49C57203F233300D0338A /* Inceptionv3.mlmodel */,
 				35CB8E73203EB1DF00C26B4F /* AppDelegate.swift */,
-				35CB8E79203EB1DF00C26B4F /* Main.storyboard */,
 				35AE706520512AF1004A84B7 /* HaveFunViewController.swift */,
-				35CB8E7E203EB1DF00C26B4F /* LaunchScreen.storyboard */,
 				35F27F63204A9162006D4A10 /* MainViewController.swift */,
-				35CB8E81203EB1DF00C26B4F /* Info.plist */,
 				35D49C5B203F2B6D00D0338A /* WelcomeViewController.swift */,
+				35CB8E79203EB1DF00C26B4F /* Main.storyboard */,
+				35CB8E7E203EB1DF00C26B4F /* LaunchScreen.storyboard */,
+				35D49C57203F233300D0338A /* Inceptionv3.mlmodel */,
+				356CC58520535651004E216F /* my_model.mlmodel */,
+				35CB8E81203EB1DF00C26B4F /* Info.plist */,
 				35CB8E75203EB1DF00C26B4F /* art.scnassets */,
 				35AE70692052E7CD004A84B7 /* Images.xcassets */,
 			);
@@ -248,6 +251,7 @@
 				35D49C5C203F2B6D00D0338A /* WelcomeViewController.swift in Sources */,
 				35D49C58203F233300D0338A /* Inceptionv3.mlmodel in Sources */,
 				35D49C60203F2CB700D0338A /* ViewController.swift in Sources */,
+				356CC58620535651004E216F /* my_model.mlmodel in Sources */,
 				35F27F64204A9162006D4A10 /* MainViewController.swift in Sources */,
 				35AE706620512AF1004A84B7 /* HaveFunViewController.swift in Sources */,
 				35CB8E74203EB1DF00C26B4F /* AppDelegate.swift in Sources */,
@@ -392,7 +396,7 @@
 				DEVELOPMENT_TEAM = 5N38Z4JN92;
 				INFOPLIST_FILE = ARWave/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.leonlee.ARWave;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leonlee.testme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -408,7 +412,7 @@
 				DEVELOPMENT_TEAM = 5N38Z4JN92;
 				INFOPLIST_FILE = ARWave/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.leonlee.ARWave;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leonlee.testme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

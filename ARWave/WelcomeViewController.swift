@@ -11,48 +11,86 @@ import ImageSlideshow
 
 class WelcomeViewController: UIViewController {
     
-    @IBOutlet weak var startButton: UIButton!
-    @IBOutlet weak var slideshow: ImageSlideshow!
+    @IBOutlet weak var firstLine: UILabel!
+    @IBOutlet weak var secondLine: UILabel!
+    @IBOutlet weak var thirdLine: UILabel!
+    @IBOutlet weak var fourthLine: UILabel!
     
-    let localSource = [ImageSource(imageString: "welcome_1")!, ImageSource(imageString: "welcome_2")!, ImageSource(imageString: "welcome_3")!]
-    let afNetworkingSource = [AFURLSource(urlString: "https://images.unsplash.com/photo-1432679963831-2dab49187847?w=1080")!, AFURLSource(urlString: "https://images.unsplash.com/photo-1447746249824-4be4e1b76d66?w=1080")!, AFURLSource(urlString: "https://images.unsplash.com/photo-1463595373836-6e0b0a8ee322?w=1080")!]
-    let alamofireSource = [AlamofireSource(urlString: "https://images.unsplash.com/photo-1432679963831-2dab49187847?w=1080")!, AlamofireSource(urlString: "https://images.unsplash.com/photo-1447746249824-4be4e1b76d66?w=1080")!, AlamofireSource(urlString: "https://images.unsplash.com/photo-1463595373836-6e0b0a8ee322?w=1080")!]
-    let sdWebImageSource = [SDWebImageSource(urlString: "https://images.unsplash.com/photo-1432679963831-2dab49187847?w=1080")!, SDWebImageSource(urlString: "https://images.unsplash.com/photo-1447746249824-4be4e1b76d66?w=1080")!, SDWebImageSource(urlString: "https://images.unsplash.com/photo-1463595373836-6e0b0a8ee322?w=1080")!]
-    let kingfisherSource = [KingfisherSource(urlString: "https://images.unsplash.com/photo-1432679963831-2dab49187847?w=1080")!, KingfisherSource(urlString: "https://images.unsplash.com/photo-1447746249824-4be4e1b76d66?w=1080")!, KingfisherSource(urlString: "https://images.unsplash.com/photo-1463595373836-6e0b0a8ee322?w=1080")!]
+    @IBOutlet weak var beforeButton: UIButton!
+    @IBOutlet weak var duringButton: UIButton!
+    @IBOutlet weak var afterButton: UIButton!
     
     override func viewDidLoad() {
-        self.startButton.isHidden = true
         super.viewDidLoad()
-        slideshow.backgroundColor = UIColor(red: (235/255.0), green: (224/255.0), blue: (196/255.0), alpha: 1.0)
-        slideshow.slideshowInterval = 0
-        slideshow.circular = false
-        slideshow.pageControlPosition = PageControlPosition.insideScrollView
-        slideshow.pageControl.currentPageIndicatorTintColor = UIColor.lightGray
-        slideshow.pageControl.pageIndicatorTintColor = UIColor.black
-        slideshow.contentScaleMode = UIViewContentMode.scaleAspectFill
+        // Hide all lables and buttons and init positions
+        self.firstLine.center = CGPoint(x: 368, y:-20)
+        firstLine.isHidden = true
+
+        self.secondLine.center = CGPoint(x: 368, y:-20)
+        secondLine.isHidden = true
+
+        self.thirdLine.center = CGPoint(x: 368, y:-20)
+        thirdLine.isHidden = true
         
-        // optional way to show activity indicator during image load (skipping the line will show no activity indicator)
-        slideshow.activityIndicator = DefaultActivityIndicator()
-        slideshow.currentPageChanged = { page in
-            print("current page:", page)
-            if (page != 2) {
-                self.startButton.isHidden = true
-            } else {
-                self.startButton.isHidden = false
-            }
-        }
+        self.fourthLine.center = CGPoint(x: 368, y:-20)
+        fourthLine.isHidden = true
         
-        // can be used with other sample sources as `afNetworkingSource`, `alamofireSource` or `sdWebImageSource` or `kingfisherSource`
-        slideshow.setImageInputs(localSource)
+        self.beforeButton.center = CGPoint(x: -40, y:240)
+        beforeButton.isHidden = true
+        self.duringButton.center = CGPoint(x: -40, y:240)
+        duringButton.isHidden = true
+        self.afterButton.center = CGPoint(x: -40, y:240)
+        afterButton.isHidden = true
         
-//        let recognizer = UITapGestureRecognizer(target: self, action: #selector(WelcomeViewController.didTap))
-//        slideshow.addGestureRecognizer(recognizer)
+        // Animate first line
+        UIView.animate(withDuration: 1.5, delay: 1, options: [], animations: {
+            self.firstLine.isHidden = false
+            self.firstLine.center = CGPoint(x: 368, y:100)
+        }, completion: nil)
+        
+        // Animate second line
+        UIView.animate(withDuration: 2, delay: 3, options: [], animations: {
+            self.secondLine.isHidden = false
+            self.secondLine.center = CGPoint(x: 368, y:160)
+        }, completion: nil)
+        
+        // Animate the third line
+        UIView.animate(withDuration: 3, delay: 5.5, options: [], animations: {
+            self.thirdLine.isHidden = false
+            self.thirdLine.center = CGPoint(x: 368, y:220)
+        }, completion: { (finished: Bool) in
+            self.firstLine.isHidden = true
+            self.secondLine.isHidden = true
+            self.thirdLine.isHidden = true
+        })
+        
+        // Animate the fourth line
+        UIView.animate(withDuration: 2, delay: 9, options: [], animations: {
+            self.fourthLine.isHidden = false
+            self.fourthLine.center = CGPoint(x: 368, y:130)
+        }, completion: nil)
+        
+        // Animate before button
+        UIView.animate(withDuration: 1.5, delay: 12, options: [], animations: {
+            self.beforeButton.isHidden = false
+            self.beforeButton.center = CGPoint(x: 150, y:240)
+        }, completion: nil)
+        
+        // Animate during button
+        UIView.animate(withDuration: 2, delay: 14, options: [], animations: {
+            self.duringButton.isHidden = false
+            self.duringButton.center = CGPoint(x: 368, y:240)
+        }, completion: nil)
+        
+        // Animate after button
+        UIView.animate(withDuration: 2.5, delay: 16.5, options: [], animations: {
+            self.afterButton.isHidden = false
+            self.afterButton.center = CGPoint(x: 586, y:240)
+        }, completion: nil)
+        
     }
     
-    
-    @objc func didTap() {
-        let fullScreenController = slideshow.presentFullScreenController(from: self)
-        // set the activity indicator for full screen controller (skipping the line will show no activity indicator)
-        fullScreenController.slideshow.activityIndicator = DefaultActivityIndicator(style: .white, color: nil)
+    @IBAction func unwindSegue(_ sender: UIStoryboardSegue) {
+        
     }
 }

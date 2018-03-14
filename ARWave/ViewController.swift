@@ -208,7 +208,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             objectName = classifications.components(separatedBy: "-")[0]
             objectName = objectName.components(separatedBy: ",")[0]
             self.latestPrediction = objectName
-            
         }
     }
     
@@ -235,6 +234,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         }
         
     }
+    
 }
 
 extension UIFont {
