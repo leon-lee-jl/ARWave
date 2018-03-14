@@ -90,6 +90,16 @@
                                     <segue destination="Yps-21-Ugu" kind="show" id="f1l-ia-okZ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agp-bC-iQQ">
+                                <rect key="frame" x="46" y="364" width="158" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Experience Earthquake">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Jfs-hJ-2jQ" kind="show" id="8rO-Ci-TVB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="XCw-DN-wTG"/>
@@ -166,6 +176,16 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H2y-fp-sjL">
+                                <rect key="frame" x="58" y="354" width="171" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Experience Earthquake">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Jfs-hJ-2jQ" kind="show" id="9Y6-oA-4hv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -185,7 +205,41 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HGP-HS-ABQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="108" y="301"/>
+            <point key="canvasLocation" x="107.60869565217392" y="300"/>
+        </scene>
+        <!--Player-->
+        <scene sceneID="Xml-jc-ttG">
+            <objects>
+                <viewController title="Player" id="Jfs-hJ-2jQ" customClass="PlayerViewController" customModule="ARWave" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NYz-Qf-lrH">
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Htj-Al-84p" customClass="VRPlayer" customModule="OmniVirtSDK">
+                                <rect key="frame" x="0.0" y="42" width="736" height="372"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RcU-uq-icZ">
+                                <rect key="frame" x="20" y="14" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="b0S-6o-jSY" kind="unwind" unwindAction="unwindSegue:" id="jI3-vX-k8J"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Kvj-MG-cVe"/>
+                    </view>
+                    <connections>
+                        <outlet property="player" destination="Htj-Al-84p" id="9N5-4N-UlF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xjT-Pl-ja6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="b0S-6o-jSY" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="814.4021739130435" y="-1159.4202898550725"/>
         </scene>
         <!--Secure Furniture-->
         <scene sceneID="tXr-a1-R10">
@@ -327,5 +381,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="WXJ-J9-iCy"/>
         <segue reference="TRT-pE-Zmf"/>
+        <segue reference="8rO-Ci-TVB"/>
     </inferredMetricsTieBreakers>
 </document>

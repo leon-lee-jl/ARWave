@@ -17,6 +17,7 @@
 		35D49C58203F233300D0338A /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 35D49C57203F233300D0338A /* Inceptionv3.mlmodel */; };
 		35D49C5C203F2B6D00D0338A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D49C5B203F2B6D00D0338A /* WelcomeViewController.swift */; };
 		35D49C60203F2CB700D0338A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D49C5F203F2CB700D0338A /* ViewController.swift */; };
+		35D6369A2059087300F608BB /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D636992059087300F608BB /* PlayerViewController.swift */; };
 		35F27F64204A9162006D4A10 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F27F63204A9162006D4A10 /* MainViewController.swift */; };
 		DB668AD275E45D2A5527A115 /* Pods_ARWave.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27A45ED09962CB784575B597 /* Pods_ARWave.framework */; };
 /* End PBXBuildFile section */
@@ -35,6 +36,7 @@
 		35D49C57203F233300D0338A /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
 		35D49C5B203F2B6D00D0338A /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		35D49C5F203F2CB700D0338A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		35D636992059087300F608BB /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		35F27F63204A9162006D4A10 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		42048FB4C265B8B923CF12F2 /* Pods-ARWave.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARWave.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARWave/Pods-ARWave.release.xcconfig"; sourceTree = "<group>"; };
 		422A84695E8DC0D19A5296F9 /* Pods-ARWave.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARWave.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARWave/Pods-ARWave.debug.xcconfig"; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				35AE706520512AF1004A84B7 /* HaveFunViewController.swift */,
 				35F27F63204A9162006D4A10 /* MainViewController.swift */,
 				35D49C5B203F2B6D00D0338A /* WelcomeViewController.swift */,
+				35D636992059087300F608BB /* PlayerViewController.swift */,
 				35CB8E79203EB1DF00C26B4F /* Main.storyboard */,
 				35CB8E7E203EB1DF00C26B4F /* LaunchScreen.storyboard */,
 				35D49C57203F233300D0338A /* Inceptionv3.mlmodel */,
@@ -224,6 +227,7 @@
 				"${BUILT_PRODUCTS_DIR}/ImageSlideshow/ImageSlideshow.framework",
 				"${BUILT_PRODUCTS_DIR}/JJFloatingActionButton/JJFloatingActionButton.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${PODS_ROOT}/OmniVirtSDK/OmniVirtSDK.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -234,6 +238,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageSlideshow.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JJFloatingActionButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OmniVirtSDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35D49C5C203F2B6D00D0338A /* WelcomeViewController.swift in Sources */,
+				35D6369A2059087300F608BB /* PlayerViewController.swift in Sources */,
 				35D49C58203F233300D0338A /* Inceptionv3.mlmodel in Sources */,
 				35D49C60203F2CB700D0338A /* ViewController.swift in Sources */,
 				356CC58620535651004E216F /* my_model.mlmodel in Sources */,
