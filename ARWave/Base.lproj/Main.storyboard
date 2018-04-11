@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dYR-8Z-lPK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14111" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dYR-8Z-lPK">
     <device id="retina5_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -301,28 +301,35 @@
         <!--Practice Drill-->
         <scene sceneID="vtV-Zi-Ij2">
             <objects>
-                <viewController title="Practice Drill" id="Tah-jn-cnh" sceneMemberID="viewController">
+                <viewController title="Practice Drill" id="Tah-jn-cnh" customClass="DuringViewController" customModule="ARWave" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fto-wH-hLg">
                         <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tcg-kq-UlA">
-                                <rect key="frame" x="645" y="0.0" width="34" height="30"/>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dsV-PW-STO">
+                                <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I3w-A3-pcL">
+                                <rect key="frame" x="676" y="23" width="20" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="restart"/>
                                 <connections>
-                                    <segue destination="Ef7-nh-Gjv" kind="unwind" unwindAction="unwindSegue:" id="j6u-pk-InR"/>
+                                    <segue destination="Ef7-nh-Gjv" kind="unwind" unwindAction="unwindSegue:" id="Pmv-1m-mF1"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="kXY-tW-H7o"/>
                     </view>
+                    <connections>
+                        <outlet property="sceneView" destination="dsV-PW-STO" id="IFX-s2-T8R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZAN-vV-zxk" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Ef7-nh-Gjv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="852" y="796"/>
+            <point key="canvasLocation" x="988.85869565217399" y="940.57971014492762"/>
         </scene>
         <!--Have Fun-->
         <scene sceneID="rSx-Xj-reP">
@@ -370,17 +377,18 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oBa-it-aCH" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="KC4-Tj-cwU" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="78" y="1317"/>
+            <point key="canvasLocation" x="-104" y="1635"/>
         </scene>
     </scenes>
     <resources>
         <image name="add" width="48" height="48"/>
+        <image name="restart" width="20" height="23"/>
         <image name="shutter" width="48" height="48"/>
         <image name="welcomeBackground" width="736" height="414"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="WXJ-J9-iCy"/>
-        <segue reference="TRT-pE-Zmf"/>
-        <segue reference="8rO-Ci-TVB"/>
+        <segue reference="psw-Ve-U0A"/>
+        <segue reference="Vi4-mn-X20"/>
+        <segue reference="9Y6-oA-4hv"/>
     </inferredMetricsTieBreakers>
 </document>

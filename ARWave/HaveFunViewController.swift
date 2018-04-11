@@ -119,18 +119,18 @@ class HaveFunViewController: UIViewController, ARSCNViewDelegate {
     }
     
     @objc func pinchRecognized(pinch: UIPinchGestureRecognizer) {
-        node.runAction(SCNAction.scale(by: pinch.scale, duration: 0.1))
+        modelNode.runAction(SCNAction.scale(by: pinch.scale, duration: 0.01))
     }
     
     @objc func panRecognized(pan: UIPanGestureRecognizer) {
         
-        let xPan = pan.velocity(in: haveFunSceneView).x/10000
+        let xPan = pan.velocity(in: haveFunSceneView).x/1000
         /*
          y pan is a not tuned for user expereience
          let yPan = pan.velocity(in: sceneView).y/10000
          */
         
-        node.runAction(SCNAction.rotateBy(x: 0, y: xPan, z: 0, duration: 0.1))
+        modelNode.runAction(SCNAction.rotateBy(x: 0, y: xPan, z: 0, duration: 0.01))
     }
     
 
