@@ -14,9 +14,11 @@ class DuringViewController: UIViewController, ARSCNViewDelegate {
     let modelNode = SCNNode()
     var isDetecing = true
 
+    @IBOutlet weak var messageBox: UILabel!
     @IBOutlet weak var sceneView: ARSCNView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        messageBox.text = "Scan a flat area..."
         addTapGestureToSceneView()
         let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(pinchRecognized(pinch:)))
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(panRecognized(pan:)))
@@ -105,6 +107,7 @@ class DuringViewController: UIViewController, ARSCNViewDelegate {
         let y = CGFloat(planeAnchor.center.y)
         let z = CGFloat(planeAnchor.center.z)
         planeNode.position = SCNVector3(x, y, z)
+        messageBox.text = "Tab to place a table. Don't worry about the table. You will use this later."
     }
     
     @objc func addTableToSceneView(withGestureRecognizer recognizer: UIGestureRecognizer) {
@@ -119,7 +122,7 @@ class DuringViewController: UIViewController, ARSCNViewDelegate {
         
         modelNode.position = SCNVector3(x,y,z)
 
-        guard let shipScene = SCNScene(named: "art.scnassets/ship.scn")
+        guard let shipScene = SCNScene(named: "art.scnassets/test.dae")
             else { return }
         
         let wrapperNode = SCNNode()
@@ -129,6 +132,7 @@ class DuringViewController: UIViewController, ARSCNViewDelegate {
         }
         modelNode.addChildNode(wrapperNode)
         sceneView.scene.rootNode.addChildNode(modelNode)
+        messageBox.text = "Step 1. Drop to the floor."
     }
     
     func addTapGestureToSceneView() {
