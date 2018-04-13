@@ -21,7 +21,8 @@ class HaveFunViewController: UIViewController, ARSCNViewDelegate {
     let modelNode = SCNNode()
     var node = SCNNode()
 
-    
+    var selectedModel = ""
+
     // Init two buttons
     fileprivate let addButton = JJFloatingActionButton()
     fileprivate let selfieButton = JJFloatingActionButton()
@@ -41,6 +42,8 @@ class HaveFunViewController: UIViewController, ARSCNViewDelegate {
         let scene = SCNScene()
         haveFunSceneView.scene = scene
         haveFunSceneView.autoenablesDefaultLighting = true
+        haveFunSceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
+
 
         // Init add model button and selfie button
 //        addButton.addItem(title: "Heart", image: #imageLiteral(resourceName: "add")) { item in
@@ -59,17 +62,17 @@ class HaveFunViewController: UIViewController, ARSCNViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    // Create a session configuration
+    let standardConfiguration: ARWorldTrackingConfiguration = {
+        let configuration = ARWorldTrackingConfiguration()
+        configuration.planeDetection = .horizontal
+        return configuration
+    }()
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        // Create a session configuration
-        let standardConfiguration: ARWorldTrackingConfiguration = {
-            let configuration = ARWorldTrackingConfiguration()
-            configuration.planeDetection = .horizontal
-            return configuration
-        }()
-        
         // Run the view's session
+    AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.portrait, andRotateTo: UIInterfaceOrientation.portrait)
         haveFunSceneView.session.run(standardConfiguration)
     }
     
@@ -77,7 +80,18 @@ class HaveFunViewController: UIViewController, ARSCNViewDelegate {
         super.viewWillDisappear(animated)
         
         // Pause the view's session
+    AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.landscapeRight, andRotateTo: UIInterfaceOrientation.landscapeRight)
         haveFunSceneView.session.pause()
+    }
+    
+    
+    @IBAction func restartSession(_ sender: Any) {
+        haveFunSceneView.session.pause()
+        haveFunSceneView.scene.rootNode.enumerateChildNodes {
+            (node, stop) in node.removeFromParentNode()
+        }
+        haveFunSceneView.session.run(standardConfiguration, options: [.resetTracking, .removeExistingAnchors])
+        selectedModel = ""
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -90,10 +104,20 @@ class HaveFunViewController: UIViewController, ARSCNViewDelegate {
         let hitTransform = hitResult.worldTransform
         
         /* Print the coordinates captured */
-        print("x: ", hitTransform[3].x, "\ny: ", hitTransform[3].y, "\nz: ", hitTransform[3].z)
+//        print("x: ", hitTransform[3].x, "\ny: ", hitTransform[3].y, "\nz: ", hitTransform[3].z)
         
         /* Look at Add Geometry Class in Controller Group */
-        addObject(position: hitTransform, sceneView: haveFunSceneView, node: modelNode, objectPath: "art.scnassets/cup/cup.scn")
+        if selectedModel.isEmpty {
+            let alert = UIAlertController(title: "No model selected.", message: "You need to select a model first.", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        else {
+            var path = "art.scnassets/" + selectedModel + ".dae"
+            addObject(position: hitTransform, sceneView: haveFunSceneView, node: modelNode, objectPath: path)
+
+        }
     }
     
 
@@ -169,16 +193,13 @@ class HaveFunViewController: UIViewController, ARSCNViewDelegate {
         }
     }
     
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func unwindSegueToFun(_ sender: UIStoryboardSegue) {
+        if let senderVC = sender.source as? SelectModelViewController {
+            selectedModel = senderVC.currentModel
+            
+        }
     }
-    */
+    
+
 
 }

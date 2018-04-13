@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		356CC58620535651004E216F /* my_model.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 356CC58520535651004E216F /* my_model.mlmodel */; };
+		3598728120807E4700368B40 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3598728020807E4700368B40 /* CollectionViewCell.swift */; };
+		3598728320807EE500368B40 /* SelectModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3598728220807EE500368B40 /* SelectModelViewController.swift */; };
+		359872872080906000368B40 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 359872862080906000368B40 /* Images.xcassets */; };
 		35AE706620512AF1004A84B7 /* HaveFunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AE706520512AF1004A84B7 /* HaveFunViewController.swift */; };
-		35AE706A2052E7CD004A84B7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35AE70692052E7CD004A84B7 /* Images.xcassets */; };
 		35B661CE207DFAFC00637C77 /* DuringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B661CD207DFAFC00637C77 /* DuringViewController.swift */; };
 		35CB8E74203EB1DF00C26B4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CB8E73203EB1DF00C26B4F /* AppDelegate.swift */; };
 		35CB8E76203EB1DF00C26B4F /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 35CB8E75203EB1DF00C26B4F /* art.scnassets */; };
@@ -26,8 +28,10 @@
 /* Begin PBXFileReference section */
 		27A45ED09962CB784575B597 /* Pods_ARWave.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARWave.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		356CC58520535651004E216F /* my_model.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = my_model.mlmodel; sourceTree = "<group>"; };
+		3598728020807E4700368B40 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		3598728220807EE500368B40 /* SelectModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectModelViewController.swift; sourceTree = "<group>"; };
+		359872862080906000368B40 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		35AE706520512AF1004A84B7 /* HaveFunViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaveFunViewController.swift; sourceTree = "<group>"; };
-		35AE70692052E7CD004A84B7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		35B661CD207DFAFC00637C77 /* DuringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuringViewController.swift; sourceTree = "<group>"; };
 		35CB8E70203EB1DF00C26B4F /* ARWave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARWave.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35CB8E73203EB1DF00C26B4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -84,13 +88,15 @@
 				35D49C5B203F2B6D00D0338A /* WelcomeViewController.swift */,
 				35D636992059087300F608BB /* PlayerViewController.swift */,
 				35B661CD207DFAFC00637C77 /* DuringViewController.swift */,
+				3598728220807EE500368B40 /* SelectModelViewController.swift */,
+				3598728020807E4700368B40 /* CollectionViewCell.swift */,
 				35CB8E79203EB1DF00C26B4F /* Main.storyboard */,
 				35CB8E7E203EB1DF00C26B4F /* LaunchScreen.storyboard */,
 				35D49C57203F233300D0338A /* Inceptionv3.mlmodel */,
 				356CC58520535651004E216F /* my_model.mlmodel */,
 				35CB8E81203EB1DF00C26B4F /* Info.plist */,
+				359872862080906000368B40 /* Images.xcassets */,
 				35CB8E75203EB1DF00C26B4F /* art.scnassets */,
-				35AE70692052E7CD004A84B7 /* Images.xcassets */,
 			);
 			path = ARWave;
 			sourceTree = "<group>";
@@ -175,7 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35CB8E76203EB1DF00C26B4F /* art.scnassets in Resources */,
-				35AE706A2052E7CD004A84B7 /* Images.xcassets in Resources */,
+				359872872080906000368B40 /* Images.xcassets in Resources */,
 				35CB8E80203EB1DF00C26B4F /* LaunchScreen.storyboard in Resources */,
 				35CB8E7B203EB1DF00C26B4F /* Main.storyboard in Resources */,
 			);
@@ -256,6 +262,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3598728120807E4700368B40 /* CollectionViewCell.swift in Sources */,
+				3598728320807EE500368B40 /* SelectModelViewController.swift in Sources */,
 				35B661CE207DFAFC00637C77 /* DuringViewController.swift in Sources */,
 				35D49C5C203F2B6D00D0338A /* WelcomeViewController.swift in Sources */,
 				35D6369A2059087300F608BB /* PlayerViewController.swift in Sources */,

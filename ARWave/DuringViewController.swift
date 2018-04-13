@@ -94,7 +94,7 @@ class DuringViewController: UIViewController, ARSCNViewDelegate, ARSessionDelega
             
             modelNode.position = SCNVector3Make(planeAnchor.transform.columns.3.x, planeAnchor.transform.columns.3.y, planeAnchor.transform.columns.3.z)
             
-            guard let shipScene = SCNScene(named: "art.scnassets/test.dae")
+            guard let shipScene = SCNScene(named: "art.scnassets/table.dae")
                 else { return }
             
             let wrapperNode = SCNNode()
