@@ -4,8 +4,8 @@
   <contributor>
    <authoring_tool>SceneKit Collada Exporter v1.0</authoring_tool>
   </contributor>
-  <created>2018-04-12T06:03:59Z</created>
-  <modified>2018-04-12T06:03:59Z</modified>
+  <created>2018-04-12T22:24:45Z</created>
+  <modified>2018-04-12T22:24:45Z</modified>
   <unit meter="0.010000"/>
   <up_axis>Y_UP</up_axis>
  </asset>
@@ -432,7 +432,7 @@
  <library_visual_scenes>
   <visual_scene id="scene38">
    <node id="Table_grp" name="Table_grp">
-    <matrix>0.1 0 0 0 0 0.1 0 0 0 0 0.1 0 0 0 0 1 </matrix>
+    <matrix>0.2 0 0 0 0 0.2 0 0 0 0 0.2 0 0 0 0 1 </matrix>
     <node id="table_drawer_l" name="table_drawer_l">
      <instance_geometry url="#geometry1">
       <bind_material>

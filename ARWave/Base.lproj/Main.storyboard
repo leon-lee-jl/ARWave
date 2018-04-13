@@ -322,8 +322,11 @@
                                 <rect key="frame" x="696" y="27" width="20" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="restart"/>
+                                <connections>
+                                    <action selector="restartSession:" destination="Tah-jn-cnh" eventType="touchUpInside" id="9Z6-IU-Uqo"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0g-zb-616" userLabel="messageBox">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0g-zb-616" userLabel="messageBox">
                                 <rect key="frame" x="242" y="92" width="252" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -336,12 +339,16 @@
                                 <state key="normal" title="Enter Passcode">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="enterPasscode:" destination="Tah-jn-cnh" eventType="touchUpInside" id="yx2-4T-CfD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="kXY-tW-H7o"/>
                     </view>
                     <connections>
+                        <outlet property="enterpasscodeButton" destination="Wa5-0m-DMm" id="Ihq-4m-79S"/>
                         <outlet property="messageBox" destination="M0g-zb-616" id="6Ym-As-VS6"/>
                         <outlet property="sceneView" destination="dsV-PW-STO" id="IFX-s2-T8R"/>
                     </connections>
@@ -360,29 +367,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sA5-VA-xwd">
-                                <rect key="frame" x="0.0" y="41" width="736" height="373"/>
+                                <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </arscnView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5A-Nk-zPp">
-                                <rect key="frame" x="80" y="3" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back"/>
-                                <connections>
-                                    <segue destination="KC4-Tj-cwU" kind="unwind" unwindAction="unwindSegue:" id="Q1s-e4-R2h"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxp-MC-lC7">
-                                <rect key="frame" x="344" y="355" width="48" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxp-MC-lC7" userLabel="add">
+                                <rect key="frame" x="668" y="183" width="48" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="add"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMp-Bc-8fD">
-                                <rect key="frame" x="42" y="355" width="48" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMp-Bc-8fD" userLabel="screenshot">
+                                <rect key="frame" x="668" y="346" width="48" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" image="shutter"/>
                                 <connections>
                                     <action selector="takeScreenshot:" destination="2zm-iT-zej" eventType="touchUpInside" id="E4S-h4-ZmX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1R-9r-VWd" userLabel="restart">
+                                <rect key="frame" x="26" y="20" width="23" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="refresh2"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5A-Nk-zPp" userLabel="back">
+                                <rect key="frame" x="20" y="364" width="35" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="back2"/>
+                                <connections>
+                                    <segue destination="KC4-Tj-cwU" kind="unwind" unwindAction="unwindSegue:" id="Q1s-e4-R2h"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -397,12 +409,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oBa-it-aCH" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="KC4-Tj-cwU" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-104" y="1635"/>
+            <point key="canvasLocation" x="-104.34782608695653" y="1634.7826086956522"/>
         </scene>
     </scenes>
     <resources>
         <image name="add" width="48" height="48"/>
         <image name="back" width="128" height="128"/>
+        <image name="back2" width="128" height="128"/>
+        <image name="refresh2" width="23" height="20"/>
         <image name="restart" width="20" height="23"/>
         <image name="shutter" width="48" height="48"/>
         <image name="welcomeBackground" width="736" height="414"/>
