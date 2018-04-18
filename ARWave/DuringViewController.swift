@@ -14,7 +14,7 @@ class DuringViewController: UIViewController, ARSCNViewDelegate, ARSessionDelega
     let modelNode = SCNNode()
     var isDetecing = true
     var passwordField: UITextField?
-    let passcode = "123456"
+    let passcode = "2938"
     var stage = "1"
     
     @IBOutlet weak var enterpasscodeButton: UIButton!
@@ -22,7 +22,7 @@ class DuringViewController: UIViewController, ARSCNViewDelegate, ARSessionDelega
     @IBOutlet weak var sceneView: ARSCNView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        messageBox.text = "Scan a flat area..."
+//        messageBox.text = "Scan a flat area..."
         
 //        addTapGestureToSceneView()
         let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(pinchRecognized(pinch:)))
@@ -94,9 +94,10 @@ class DuringViewController: UIViewController, ARSCNViewDelegate, ARSessionDelega
             
             modelNode.position = SCNVector3Make(planeAnchor.transform.columns.3.x, planeAnchor.transform.columns.3.y, planeAnchor.transform.columns.3.z)
             
-            guard let shipScene = SCNScene(named: "art.scnassets/table.dae")
+            guard let shipScene = SCNScene(named: "art.scnassets/Table/Table.dae")
                 else { return }
             
+            print("dsfsdfds")
             let wrapperNode = SCNNode()
             for child in shipScene.rootNode.childNodes {
                 child.geometry?.firstMaterial?.lightingModel = .physicallyBased
@@ -109,22 +110,22 @@ class DuringViewController: UIViewController, ARSCNViewDelegate, ARSessionDelega
     }
     
     func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
-        guard let planeAnchor = anchor as?  ARPlaneAnchor,
-            let planeNode = node.childNodes.first,
-            let plane = planeNode.geometry as? SCNPlane
-            else { return }
-        
-        // 2
-        let width = CGFloat(planeAnchor.extent.x)
-        let height = CGFloat(planeAnchor.extent.z)
-        plane.width = width
-        plane.height = height
-        
-        // 3
-        let x = CGFloat(planeAnchor.center.x)
-        let y = CGFloat(planeAnchor.center.y)
-        let z = CGFloat(planeAnchor.center.z)
-        planeNode.position = SCNVector3(x, y, z)
+//        guard let planeAnchor = anchor as?  ARPlaneAnchor,
+//            let planeNode = node.childNodes.first,
+//            let plane = planeNode.geometry as? SCNPlane
+//            else { return }
+//        
+//        // 2
+//        let width = CGFloat(planeAnchor.extent.x)
+//        let height = CGFloat(planeAnchor.extent.z)
+//        plane.width = width
+//        plane.height = height
+//        
+//        // 3
+//        let x = CGFloat(planeAnchor.center.x)
+//        let y = CGFloat(planeAnchor.center.y)
+//        let z = CGFloat(planeAnchor.center.z)
+//        planeNode.position = SCNVector3(x, y, z)
     }
     
     // Get current position from camera

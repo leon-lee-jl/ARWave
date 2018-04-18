@@ -114,7 +114,7 @@ class HaveFunViewController: UIViewController, ARSCNViewDelegate {
             return
         }
         else {
-            var path = "art.scnassets/" + selectedModel + ".dae"
+            var path = "art.scnassets/" + selectedModel + "/" + selectedModel + ".dae"
             addObject(position: hitTransform, sceneView: haveFunSceneView, node: modelNode, objectPath: path)
 
         }
