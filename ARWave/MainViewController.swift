@@ -16,11 +16,10 @@ class MainViewController: UIViewController {
     @IBOutlet weak var afterButton: UIButton!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         beforeButton.layer.cornerRadius = 10
         duringButton.layer.cornerRadius = 10
         afterButton.layer.cornerRadius = 10
-        afterButton.alpha = 1
+        super.viewDidLoad()
     }
     
     @IBAction func unwindSegue(_ sender: UIStoryboardSegue) {

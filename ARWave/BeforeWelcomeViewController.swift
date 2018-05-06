@@ -10,10 +10,16 @@ import UIKit
 
 class BeforeWelcomeViewController: UIViewController {
 
+    @IBOutlet weak var startButton: UIButton!
     override func viewDidLoad() {
+        startButton.layer.cornerRadius = 6
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        startButton.layer.cornerRadius = 6
     }
 
     override func didReceiveMemoryWarning() {
