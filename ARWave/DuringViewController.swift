@@ -97,7 +97,6 @@ class DuringViewController: UIViewController, ARSCNViewDelegate, ARSessionDelega
             guard let shipScene = SCNScene(named: "art.scnassets/Table/Table.dae")
                 else { return }
             
-            print("dsfsdfds")
             let wrapperNode = SCNNode()
             for child in shipScene.rootNode.childNodes {
                 child.geometry?.firstMaterial?.lightingModel = .physicallyBased

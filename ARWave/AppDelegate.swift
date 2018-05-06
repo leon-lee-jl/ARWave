@@ -33,6 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        // Delay 2 seconds for launch screen
+        RunLoop.current.run(until: NSDate(timeIntervalSinceNow: 1) as Date)
         // Override point for customization after application launch.
         return true
     }

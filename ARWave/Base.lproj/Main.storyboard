@@ -64,6 +64,14 @@ eathquake might strike any second!</string>
                                     <segue destination="Yps-21-Ugu" kind="show" id="OSX-3g-0Re"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8V-Di-DHS">
+                                <rect key="frame" x="623" y="310" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Debug"/>
+                                <connections>
+                                    <segue destination="hFO-6Y-sfD" kind="show" id="p7H-kc-HQF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="XCw-DN-wTG"/>
@@ -275,30 +283,22 @@ eathquake might strike any second!</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Before Earthquake: Secure Home" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X58-J5-qx4">
-                                <rect key="frame" x="0.0" y="0.0" width="736" height="38"/>
+                                <rect key="frame" x="0.0" y="0.0" width="736" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSQ-ek-18N" userLabel="Home Button">
-                                <rect key="frame" x="690" y="6" width="26" height="26"/>
+                                <rect key="frame" x="690" y="14" width="26" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="house-black-silhouette-without-door"/>
                                 <connections>
                                     <segue destination="LB8-Bz-VUZ" kind="unwind" unwindAction="unwindSegue:" id="Nev-Fi-leC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nx8-Xb-2Lp" userLabel="Back Button">
-                                <rect key="frame" x="14" y="8" width="22" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="left-arrow-chevron"/>
-                                <connections>
-                                    <segue destination="LB8-Bz-VUZ" kind="unwind" unwindAction="unwindSegue:" id="6dq-Zv-2J1"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="4SH-UJ-w3l">
-                                <rect key="frame" x="0.0" y="37" width="736" height="1"/>
+                                <rect key="frame" x="0.0" y="54" width="736" height="1"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="In this section, you will learn how to secure your furniture" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDF-YR-0Hp">
@@ -333,6 +333,14 @@ eathquake might strike any second!</string>
                                     <segue destination="BV1-FR-VrT" kind="show" id="rfm-Uy-Qft"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nx8-Xb-2Lp" userLabel="Back Button">
+                                <rect key="frame" x="20" y="16" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="left-arrow-chevron"/>
+                                <connections>
+                                    <segue destination="LB8-Bz-VUZ" kind="unwind" unwindAction="unwindSegue:" id="6dq-Zv-2J1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="3E9-9A-PrF"/>
@@ -344,7 +352,7 @@ eathquake might strike any second!</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U63-tr-CBA" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="LB8-Bz-VUZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-787" y="2000"/>
+            <point key="canvasLocation" x="-787.50000000000011" y="2000.0000000000002"/>
         </scene>
         <!--Secure Furniture-->
         <scene sceneID="tXr-a1-R10">
@@ -354,31 +362,15 @@ eathquake might strike any second!</string>
                         <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XMs-gA-sya">
-                                <rect key="frame" x="0.0" y="73" width="736" height="341"/>
-                            </arscnView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hWs-m5-HIX">
-                                <rect key="frame" x="0.0" y="349" width="736" height="65"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.51875535100000003" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="Psf-Wg-SBy"/>
-                                </constraints>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fsc-JN-lWZ">
-                                <rect key="frame" x="357" y="196" width="22" height="22"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Before Earthquake: Secure Home" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HHk-Rs-sqb">
-                                <rect key="frame" x="0.0" y="-1" width="736" height="38"/>
+                                <rect key="frame" x="0.0" y="-1" width="736" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hw7-wH-f1L" userLabel="Home Button">
-                                <rect key="frame" x="690" y="5" width="26" height="26"/>
+                                <rect key="frame" x="690" y="13" width="26" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="house-black-silhouette-without-door"/>
                                 <connections>
@@ -386,41 +378,51 @@ eathquake might strike any second!</string>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="QZ8-pN-h5X">
-                                <rect key="frame" x="0.0" y="37" width="736" height="1"/>
+                                <rect key="frame" x="0.0" y="53" width="739" height="1"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ikp-A4-OHa" userLabel="Back Button">
-                                <rect key="frame" x="18" y="7" width="22" height="22"/>
+                                <rect key="frame" x="20" y="15" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="left-arrow-chevron"/>
                                 <connections>
                                     <segue destination="YfZ-ID-lnb" kind="unwind" unwindAction="unwindSegueToBeforeWelcome:" id="V5v-5l-Z3K"/>
                                 </connections>
                             </button>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XMs-gA-sya">
+                                <rect key="frame" x="0.0" y="51" width="736" height="363"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </arscnView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label Text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ohc-G6-nTR">
+                                <rect key="frame" x="50" y="197" width="637" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="check-mark-black-outline" translatesAutoresizingMaskIntoConstraints="NO" id="wHN-Se-OQe">
+                                <rect key="frame" x="349" y="244" width="44" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fsc-JN-lWZ">
+                                <rect key="frame" x="351" y="197" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="fsc-JN-lWZ" firstAttribute="centerY" secondItem="tix-nH-sfG" secondAttribute="centerY" id="F1P-V6-WRz"/>
-                            <constraint firstItem="fsc-JN-lWZ" firstAttribute="centerX" secondItem="tix-nH-sfG" secondAttribute="centerX" id="FRB-xB-mYc"/>
-                            <constraint firstItem="hWs-m5-HIX" firstAttribute="trailing" secondItem="W2V-Gj-Pwx" secondAttribute="trailing" id="Pop-CU-HNn"/>
-                            <constraint firstItem="hWs-m5-HIX" firstAttribute="leading" secondItem="W2V-Gj-Pwx" secondAttribute="leading" id="bYb-Zu-hM1"/>
-                            <constraint firstItem="XMs-gA-sya" firstAttribute="trailing" secondItem="W2V-Gj-Pwx" secondAttribute="trailing" id="bg6-Jm-8Wb"/>
-                            <constraint firstItem="XMs-gA-sya" firstAttribute="leading" secondItem="W2V-Gj-Pwx" secondAttribute="leading" id="fgq-Rs-G2A"/>
-                            <constraint firstItem="hWs-m5-HIX" firstAttribute="top" secondItem="tix-nH-sfG" secondAttribute="top" constant="35" id="hFg-7r-eMc"/>
-                            <constraint firstItem="XMs-gA-sya" firstAttribute="top" secondItem="tix-nH-sfG" secondAttribute="top" constant="35" id="vHp-rp-JQw"/>
-                            <constraint firstItem="XMs-gA-sya" firstAttribute="bottom" secondItem="W2V-Gj-Pwx" secondAttribute="bottom" id="zam-8D-9DF"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="W2V-Gj-Pwx"/>
                     </view>
                     <connections>
-                        <outlet property="debugTextView" destination="hWs-m5-HIX" id="aW0-YQ-CNv"/>
+                        <outlet property="checkMarkImage" destination="wHN-Se-OQe" id="UsP-3i-uWW"/>
+                        <outlet property="messageBox" destination="Ohc-G6-nTR" id="n7w-BB-xdQ"/>
                         <outlet property="sceneView" destination="XMs-gA-sya" id="uz8-4k-aSX"/>
+                        <outlet property="targetButton" destination="fsc-JN-lWZ" id="Czw-td-QVe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
                 <exit id="YfZ-ID-lnb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-788" y="3033"/>
+            <point key="canvasLocation" x="-788.31521739130437" y="3031.884057971015"/>
         </scene>
         <!--During Welcome-->
         <scene sceneID="Gvb-3m-7Cc">
@@ -431,34 +433,26 @@ eathquake might strike any second!</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="During Earthquake: Drills" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3Z-qQ-BtT">
-                                <rect key="frame" x="0.0" y="-1" width="736" height="38"/>
+                                <rect key="frame" x="0.0" y="-1" width="736" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvg-Bb-2x1" userLabel="Home Button">
-                                <rect key="frame" x="690" y="6" width="26" height="26"/>
+                                <rect key="frame" x="690" y="13" width="26" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="house-black-silhouette-without-door"/>
                                 <connections>
                                     <segue destination="e0d-UC-MnN" kind="unwind" unwindAction="unwindSegue:" id="dts-yF-JDO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOc-Fp-5cc" userLabel="Back Button">
-                                <rect key="frame" x="14" y="8" width="22" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="left-arrow-chevron"/>
-                                <connections>
-                                    <segue destination="e0d-UC-MnN" kind="unwind" unwindAction="unwindSegue:" id="4aO-R7-5dE"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="yHo-Bf-Jne">
-                                <rect key="frame" x="0.0" y="38" width="736" height="1"/>
+                                <rect key="frame" x="0.0" y="53" width="736" height="1"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="drillBackground" translatesAutoresizingMaskIntoConstraints="NO" id="yS2-6M-fiT">
-                                <rect key="frame" x="0.0" y="40" width="736" height="374"/>
+                                <rect key="frame" x="0.0" y="54" width="736" height="360"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4T7-9G-3CO">
@@ -547,6 +541,14 @@ recommended action is </string>
                                     <segue destination="2aI-ql-7Ox" kind="show" id="BJI-bl-rMO"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOc-Fp-5cc" userLabel="Back Button">
+                                <rect key="frame" x="20" y="15" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="left-arrow-chevron"/>
+                                <connections>
+                                    <segue destination="e0d-UC-MnN" kind="unwind" unwindAction="unwindSegue:" id="4aO-R7-5dE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="DjZ-Ta-Rh9"/>
@@ -575,30 +577,22 @@ recommended action is </string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="During Earthquake: Drills" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oj6-r7-k6Q">
-                                <rect key="frame" x="0.0" y="0.0" width="736" height="38"/>
+                                <rect key="frame" x="0.0" y="0.0" width="736" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aC8-um-cLj" userLabel="Home Button">
-                                <rect key="frame" x="690" y="6" width="26" height="26"/>
+                                <rect key="frame" x="690" y="14" width="26" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="house-black-silhouette-without-door"/>
                                 <connections>
                                     <segue destination="o26-Xj-fqc" kind="unwind" unwindAction="unwindSegue:" id="4X0-sz-JFm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbp-bP-mdW" userLabel="Back Button">
-                                <rect key="frame" x="14" y="8" width="22" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="left-arrow-chevron"/>
-                                <connections>
-                                    <segue destination="o26-Xj-fqc" kind="unwind" unwindAction="unwindSegueToDuringWelcome:" id="i3f-KM-NNe"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="jkn-Y3-Cdg">
-                                <rect key="frame" x="0.0" y="37" width="736" height="1"/>
+                                <rect key="frame" x="0.0" y="54" width="736" height="1"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="eEL-YV-Cu6">
@@ -635,6 +629,14 @@ recommended action is </string>
                                 <color key="textColor" red="0.073124460880000006" green="0.1063919738" blue="0.82593780760000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" red="0.073124460880000006" green="0.1063919738" blue="0.82593780760000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbp-bP-mdW" userLabel="Back Button">
+                                <rect key="frame" x="20" y="16" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="left-arrow-chevron"/>
+                                <connections>
+                                    <segue destination="o26-Xj-fqc" kind="unwind" unwindAction="unwindSegueToDuringWelcome:" id="i3f-KM-NNe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="opA-It-WOy"/>
@@ -843,6 +845,7 @@ recommended action is </string>
         <image name="back" width="128" height="128"/>
         <image name="buttonBackground" width="200" height="400"/>
         <image name="buttonBackground2" width="200" height="400"/>
+        <image name="check-mark-black-outline" width="32" height="32"/>
         <image name="drillBackground" width="1472" height="828"/>
         <image name="exclamation-mark" width="32" height="32"/>
         <image name="house-black-silhouette-without-door" width="64" height="64"/>

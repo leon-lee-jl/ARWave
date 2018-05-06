@@ -15,21 +15,35 @@ import Vision
 class ViewController: UIViewController, ARSCNViewDelegate {
 
     // SCENE
+    var placed = Set<String>()
+
     @IBOutlet var sceneView: ARSCNView!
     let bubbleDepth : Float = 0.01 // the 'depth' of 3D text
     var latestPrediction : String = "…" // a variable containing the latest CoreML prediction
+    let modelNode = SCNNode()
+    var latestProbability : Float = 0.0
+    @IBOutlet weak var targetButton: UIButton!
+    @IBOutlet weak var messageBox: UILabel!
+    @IBOutlet weak var checkMarkImage: UIImageView!
+    var isDetecting = true
+    var finishScanning = false
+    var x : CGFloat = 0.0
+    var y : CGFloat = 0.0
+    var z : CGFloat = 0.0
     
     // COREML
     var visionRequests = [VNRequest]()
     let dispatchQueueML = DispatchQueue(label: "com.hw.dispatchqueueml") // A Serial Queue
-    @IBOutlet weak var debugTextView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        targetButton.isHidden = true
+        messageBox.text = "Scan floor at chest level to record height"
         // Set the view's delegate
         sceneView.delegate = self
+        checkMarkImage.isHidden = true
         
         // Show statistics such as fps and timing information
-        sceneView.showsStatistics = true
+        sceneView.showsStatistics = false
         
         // Create a new scene
         let scene = SCNScene()
@@ -39,7 +53,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // Enable Default Lighting - makes the 3D text a bit poppier.
         sceneView.autoenablesDefaultLighting = true
-        
+        sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
         
         // Set up Vision Model
         guard let selectedModel = try? VNCoreMLModel(for: my_model_bear().model) else { // (Optional) This can be replaced with other models on https://developer.apple.com/machine-learning/
@@ -78,6 +92,50 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         super.didReceiveMemoryWarning()
         // Release any cached data, images, etc that aren't in use.
     }
+    
+    func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
+        if self.isDetecting {
+            guard let planeAnchor = anchor as? ARPlaneAnchor else {return}
+            self.x =  CGFloat(planeAnchor.transform.columns.3.x)
+            self.y =  CGFloat(planeAnchor.transform.columns.3.y)
+            self.z =  CGFloat(planeAnchor.transform.columns.3.z)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                self.messageBox.text = "Height recorded"
+                self.checkMarkImage.isHidden = false
+            }
+            
+            // Wait for 3 seconds to start scanning room
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                self.checkMarkImage.isHidden = true
+                self.messageBox.text = "Scan room at eye level"
+                self.targetButton.isHidden = false
+            }
+            self.finishScanning = true
+            self.isDetecting = false
+        }
+    }
+    
+    
+    func placeVirtualObject() {
+        if finishScanning && self.latestProbability >= 0.92 && !placed.contains(self.latestPrediction){
+            // add node to scnView
+            modelNode.position = SCNVector3Make(Float(self.x), Float(self.y), Float(self.z))
+            guard let shipScene = SCNScene(named: "art.scnassets/bookshelf.dae")
+                else { return }
+            let wrapperNode = SCNNode()
+            for child in shipScene.rootNode.childNodes {
+                child.geometry?.firstMaterial?.lightingModel = .physicallyBased
+                wrapperNode.addChildNode(child)
+            }
+            modelNode.addChildNode(wrapperNode)
+            sceneView.scene.rootNode.addChildNode(modelNode)
+            
+            // Add placed objects to set
+            self.placed.insert(self.latestPrediction)
+        }
+    }
+    
+    
     
     // MARK: - ARSCNViewDelegate
     
@@ -187,19 +245,14 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         DispatchQueue.main.async {
             // Print Classifications
-            print(classifications)
-            print("--")
-            
-            // Display Debug Text on screen
-            var debugText:String = ""
-            debugText += classifications
-            self.debugTextView.text = debugText
             
             // Store the latest prediction
             var objectName:String = "…"
             objectName = classifications.components(separatedBy: "-")[0]
             objectName = objectName.components(separatedBy: ",")[0]
             self.latestPrediction = objectName
+            self.latestProbability = (classifications.components(separatedBy: "-")[1] as NSString).floatValue
+            self.placeVirtualObject()
         }
     }
     
