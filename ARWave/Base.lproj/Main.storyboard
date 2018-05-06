@@ -137,7 +137,6 @@ eathquake might strike any second!</string>
                     </view>
                     <connections>
                         <outlet property="afterLabel" destination="zWi-jk-Dv6" id="1Rc-t0-oL1"/>
-                        <outlet property="beforeButton" destination="agJ-c6-PN4" id="bce-P2-afj"/>
                         <outlet property="beforeLabel" destination="0JA-mh-Thb" id="WyA-IF-QiP"/>
                         <outlet property="duringButton" destination="5a1-1S-BJ8" id="Ud9-8T-8sE"/>
                         <outlet property="duringLabel" destination="IPl-Tr-ngJ" id="S8q-ys-m0g"/>
@@ -177,12 +176,13 @@ eathquake might strike any second!</string>
                                     <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="JAi-2P-CqN" userLabel="After Button">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenDisabled="NO" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="JAi-2P-CqN" userLabel="After Button">
                                 <rect key="frame" x="458" y="155" width="121" height="161"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="After earthquake" backgroundImage="buttonBackground2">
-                                    <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.40000000000000002" green="0.4039215686" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Comming soon" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHo-is-d1J">
@@ -203,6 +203,11 @@ eathquake might strike any second!</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="nRR-O7-Aaq"/>
                     </view>
+                    <connections>
+                        <outlet property="afterButton" destination="JAi-2P-CqN" id="knW-hn-fOU"/>
+                        <outlet property="beforeButton" destination="agJ-c6-PN4" id="QiN-te-5eW"/>
+                        <outlet property="duringButton" destination="5a1-1S-BJ8" id="N7p-1J-H2U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="euz-4a-Jb7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
