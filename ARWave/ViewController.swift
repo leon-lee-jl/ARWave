@@ -40,16 +40,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Enable Default Lighting - makes the 3D text a bit poppier.
         sceneView.autoenablesDefaultLighting = true
         
-        //////////////////////////////////////////////////
-        // Tap Gesture Recognizer
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(gestureRecognize:)))
-        view.addGestureRecognizer(tapGesture)
-        
-        //////////////////////////////////////////////////
         
         // Set up Vision Model
-        guard let selectedModel = try? VNCoreMLModel(for: Inceptionv3().model) else { // (Optional) This can be replaced with other models on https://developer.apple.com/machine-learning/
-            fatalError("Could not load model. Ensure model has been drag and dropped (copied) to XCode Project from https://developer.apple.com/machine-learning/ . Also ensure the model is part of a target (see: https://stackoverflow.com/questions/45884085/model-is-not-part-of-any-target-add-the-model-to-a-target-to-enable-generation ")
+        guard let selectedModel = try? VNCoreMLModel(for: my_model_bear().model) else { // (Optional) This can be replaced with other models on https://developer.apple.com/machine-learning/
+            fatalError("Could not load model. Ensure model has been dragle and dropped (copied) to XCode Project from https://developer.apple.com/machine-learning/ . Also ensure the model is part of a target (see: https://stackoverflow.com/questions/45884085/model-is-not-part-of-any-target-add-the-model-to-a-target-to-enable-generation ")
         }
         
         // Set up Vision-CoreML Request
@@ -164,11 +158,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     func loopCoreMLUpdate() {
         // Continuously run CoreML whenever it's ready. (Preventing 'hiccups' in Frame Rate)
-        
         dispatchQueueML.async {
             // 1. Run Update.
             self.updateCoreML()
-            
             // 2. Loop this function.
             self.loopCoreMLUpdate()
         }
