@@ -64,6 +64,10 @@ class DuringWelcomeViewController: UIViewController {
         self.startButton.isHidden = false
     }
     
+    
+    @IBAction func unwindSegueToDuringWelcome(_ sender: UIStoryboardSegue) {
+        
+    }
     /*
     // MARK: - Navigation
 
