@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		355AEFE4209EBAAE00FCD681 /* WelcomeTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355AEFE3209EBAAE00FCD681 /* WelcomeTwoViewController.swift */; };
 		356CC58620535651004E216F /* my_model.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 356CC58520535651004E216F /* my_model.mlmodel */; };
 		3598728120807E4700368B40 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3598728020807E4700368B40 /* CollectionViewCell.swift */; };
 		3598728320807EE500368B40 /* SelectModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3598728220807EE500368B40 /* SelectModelViewController.swift */; };
@@ -18,15 +19,16 @@
 		35CB8E7B203EB1DF00C26B4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35CB8E79203EB1DF00C26B4F /* Main.storyboard */; };
 		35CB8E80203EB1DF00C26B4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35CB8E7E203EB1DF00C26B4F /* LaunchScreen.storyboard */; };
 		35D49C58203F233300D0338A /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 35D49C57203F233300D0338A /* Inceptionv3.mlmodel */; };
-		35D49C5C203F2B6D00D0338A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D49C5B203F2B6D00D0338A /* WelcomeViewController.swift */; };
 		35D49C60203F2CB700D0338A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D49C5F203F2CB700D0338A /* ViewController.swift */; };
 		35D6369A2059087300F608BB /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D636992059087300F608BB /* PlayerViewController.swift */; };
+		35E8B94E209E95B7002C2D04 /* WelcomeOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E8B94D209E95B7002C2D04 /* WelcomeOneViewController.swift */; };
 		35F27F64204A9162006D4A10 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F27F63204A9162006D4A10 /* MainViewController.swift */; };
 		DB668AD275E45D2A5527A115 /* Pods_ARWave.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27A45ED09962CB784575B597 /* Pods_ARWave.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		27A45ED09962CB784575B597 /* Pods_ARWave.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARWave.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		355AEFE3209EBAAE00FCD681 /* WelcomeTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeTwoViewController.swift; sourceTree = "<group>"; };
 		356CC58520535651004E216F /* my_model.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = my_model.mlmodel; sourceTree = "<group>"; };
 		3598728020807E4700368B40 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		3598728220807EE500368B40 /* SelectModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectModelViewController.swift; sourceTree = "<group>"; };
@@ -40,9 +42,9 @@
 		35CB8E7F203EB1DF00C26B4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35CB8E81203EB1DF00C26B4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35D49C57203F233300D0338A /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
-		35D49C5B203F2B6D00D0338A /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		35D49C5F203F2CB700D0338A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		35D636992059087300F608BB /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		35E8B94D209E95B7002C2D04 /* WelcomeOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeOneViewController.swift; sourceTree = "<group>"; };
 		35F27F63204A9162006D4A10 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		42048FB4C265B8B923CF12F2 /* Pods-ARWave.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARWave.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARWave/Pods-ARWave.release.xcconfig"; sourceTree = "<group>"; };
 		422A84695E8DC0D19A5296F9 /* Pods-ARWave.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARWave.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARWave/Pods-ARWave.debug.xcconfig"; sourceTree = "<group>"; };
@@ -81,11 +83,12 @@
 		35CB8E72203EB1DF00C26B4F /* ARWave */ = {
 			isa = PBXGroup;
 			children = (
-				35D49C5F203F2CB700D0338A /* ViewController.swift */,
 				35CB8E73203EB1DF00C26B4F /* AppDelegate.swift */,
+				35E8B94D209E95B7002C2D04 /* WelcomeOneViewController.swift */,
+				355AEFE3209EBAAE00FCD681 /* WelcomeTwoViewController.swift */,
+				35D49C5F203F2CB700D0338A /* ViewController.swift */,
 				35AE706520512AF1004A84B7 /* HaveFunViewController.swift */,
 				35F27F63204A9162006D4A10 /* MainViewController.swift */,
-				35D49C5B203F2B6D00D0338A /* WelcomeViewController.swift */,
 				35D636992059087300F608BB /* PlayerViewController.swift */,
 				35B661CD207DFAFC00637C77 /* DuringViewController.swift */,
 				3598728220807EE500368B40 /* SelectModelViewController.swift */,
@@ -264,10 +267,11 @@
 			files = (
 				3598728120807E4700368B40 /* CollectionViewCell.swift in Sources */,
 				3598728320807EE500368B40 /* SelectModelViewController.swift in Sources */,
+				355AEFE4209EBAAE00FCD681 /* WelcomeTwoViewController.swift in Sources */,
 				35B661CE207DFAFC00637C77 /* DuringViewController.swift in Sources */,
-				35D49C5C203F2B6D00D0338A /* WelcomeViewController.swift in Sources */,
 				35D6369A2059087300F608BB /* PlayerViewController.swift in Sources */,
 				35D49C58203F233300D0338A /* Inceptionv3.mlmodel in Sources */,
+				35E8B94E209E95B7002C2D04 /* WelcomeOneViewController.swift in Sources */,
 				35D49C60203F2CB700D0338A /* ViewController.swift in Sources */,
 				356CC58620535651004E216F /* my_model.mlmodel in Sources */,
 				35F27F64204A9162006D4A10 /* MainViewController.swift in Sources */,
