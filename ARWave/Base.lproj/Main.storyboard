@@ -667,7 +667,7 @@ recommended action is </string>
         <!--DuringMain-->
         <scene sceneID="5MU-zr-Xyr">
             <objects>
-                <viewController id="2aI-ql-7Ox" userLabel="DuringMain" sceneMemberID="viewController">
+                <viewController id="2aI-ql-7Ox" userLabel="DuringMain" customClass="DuringMainViewController" customModule="ARWave" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hCJ-Je-qje">
                         <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -691,6 +691,14 @@ recommended action is </string>
                                 <rect key="frame" x="0.0" y="54" width="736" height="1"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbp-bP-mdW" userLabel="Back Button">
+                                <rect key="frame" x="20" y="16" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="left-arrow-chevron"/>
+                                <connections>
+                                    <segue destination="o26-Xj-fqc" kind="unwind" unwindAction="unwindSegueToDuringWelcome:" id="i3f-KM-NNe"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="eEL-YV-Cu6">
                                 <rect key="frame" x="122" y="149" width="120" height="161"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -725,14 +733,6 @@ recommended action is </string>
                                 <color key="textColor" red="0.073124460880000006" green="0.1063919738" blue="0.82593780760000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" red="0.073124460880000006" green="0.1063919738" blue="0.82593780760000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbp-bP-mdW" userLabel="Back Button">
-                                <rect key="frame" x="20" y="16" width="22" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="left-arrow-chevron"/>
-                                <connections>
-                                    <segue destination="o26-Xj-fqc" kind="unwind" unwindAction="unwindSegueToDuringWelcome:" id="i3f-KM-NNe"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="opA-It-WOy"/>
@@ -752,25 +752,9 @@ recommended action is </string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dsV-PW-STO">
-                                <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                                <rect key="frame" x="0.0" y="55" width="736" height="359"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </arscnView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I3w-A3-pcL" userLabel="Back">
-                                <rect key="frame" x="28" y="23" width="21" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="back"/>
-                                <connections>
-                                    <segue destination="Ef7-nh-Gjv" kind="unwind" unwindAction="unwindSegue:" id="Pmv-1m-mF1"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6M-D4-chj" userLabel="Restart">
-                                <rect key="frame" x="696" y="27" width="20" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="restart"/>
-                                <connections>
-                                    <action selector="restartSession:" destination="Tah-jn-cnh" eventType="touchUpInside" id="9Z6-IU-Uqo"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0g-zb-616" userLabel="messageBox">
                                 <rect key="frame" x="242" y="92" width="252" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -788,6 +772,41 @@ recommended action is </string>
                                     <action selector="enterPasscode:" destination="Tah-jn-cnh" eventType="touchUpInside" id="yx2-4T-CfD"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6M-D4-chj" userLabel="Restart">
+                                <rect key="frame" x="696" y="371" width="20" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="restart"/>
+                                <connections>
+                                    <action selector="restartSession:" destination="Tah-jn-cnh" eventType="touchUpInside" id="9Z6-IU-Uqo"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="During Earthquake: Drills" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xML-IN-mtv">
+                                <rect key="frame" x="0.0" y="0.0" width="736" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FTD-Z4-w8h" userLabel="Home Button">
+                                <rect key="frame" x="690" y="14" width="26" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="house-black-silhouette-without-door"/>
+                                <connections>
+                                    <segue destination="Ef7-nh-Gjv" kind="unwind" unwindAction="unwindSegue:" id="LNp-Ll-jnA"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="b7k-rJ-Hdu">
+                                <rect key="frame" x="0.0" y="54" width="736" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YBx-n2-Xkd" userLabel="Back Button">
+                                <rect key="frame" x="20" y="16" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="left-arrow-chevron"/>
+                                <connections>
+                                    <segue destination="Ef7-nh-Gjv" kind="unwind" unwindAction="unwindSegueToDuringMain:" id="DhH-jW-mQa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="kXY-tW-H7o"/>
@@ -801,7 +820,7 @@ recommended action is </string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZAN-vV-zxk" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Ef7-nh-Gjv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1169" y="2752"/>
+            <point key="canvasLocation" x="1168.2065217391305" y="2750.7246376811595"/>
         </scene>
         <!--Have Fun-->
         <scene sceneID="rSx-Xj-reP">

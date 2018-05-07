@@ -25,10 +25,10 @@ class DuringViewController: UIViewController, ARSCNViewDelegate, ARSessionDelega
 //        messageBox.text = "Scan a flat area..."
         
 //        addTapGestureToSceneView()
-        let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(pinchRecognized(pinch:)))
-        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(panRecognized(pan:)))
-        self.view.addGestureRecognizer(pinchGesture)
-        self.view.addGestureRecognizer(panGesture)
+//        let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(pinchRecognized(pinch:)))
+//        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(panRecognized(pan:)))
+//        self.view.addGestureRecognizer(pinchGesture)
+//        self.view.addGestureRecognizer(panGesture)
         
         sceneView.delegate = self
         let scene = SCNScene()

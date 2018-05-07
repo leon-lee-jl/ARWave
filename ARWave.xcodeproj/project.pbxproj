@@ -17,6 +17,7 @@
 		35AE706620512AF1004A84B7 /* HaveFunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AE706520512AF1004A84B7 /* HaveFunViewController.swift */; };
 		35B661CE207DFAFC00637C77 /* DuringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B661CD207DFAFC00637C77 /* DuringViewController.swift */; };
 		35C96D1120A045BF002D8603 /* BeforeDoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C96D1020A045BF002D8603 /* BeforeDoneViewController.swift */; };
+		35C96D1320A04E4F002D8603 /* DuringMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C96D1220A04E4F002D8603 /* DuringMainViewController.swift */; };
 		35CB8E74203EB1DF00C26B4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CB8E73203EB1DF00C26B4F /* AppDelegate.swift */; };
 		35CB8E76203EB1DF00C26B4F /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 35CB8E75203EB1DF00C26B4F /* art.scnassets */; };
 		35CB8E7B203EB1DF00C26B4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35CB8E79203EB1DF00C26B4F /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 		35AE706520512AF1004A84B7 /* HaveFunViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaveFunViewController.swift; sourceTree = "<group>"; };
 		35B661CD207DFAFC00637C77 /* DuringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuringViewController.swift; sourceTree = "<group>"; };
 		35C96D1020A045BF002D8603 /* BeforeDoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeforeDoneViewController.swift; sourceTree = "<group>"; };
+		35C96D1220A04E4F002D8603 /* DuringMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuringMainViewController.swift; sourceTree = "<group>"; };
 		35CB8E70203EB1DF00C26B4F /* ARWave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARWave.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35CB8E73203EB1DF00C26B4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35CB8E75203EB1DF00C26B4F /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -93,7 +95,9 @@
 				35F27F63204A9162006D4A10 /* MainViewController.swift */,
 				355AEFE5209ECEE900FCD681 /* BeforeWelcomeViewController.swift */,
 				35D49C5F203F2CB700D0338A /* ViewController.swift */,
+				35C96D1020A045BF002D8603 /* BeforeDoneViewController.swift */,
 				3552311C209EDC6600FE135F /* DuringWelcomeViewController.swift */,
+				35C96D1220A04E4F002D8603 /* DuringMainViewController.swift */,
 				35B661CD207DFAFC00637C77 /* DuringViewController.swift */,
 				3598728220807EE500368B40 /* SelectModelViewController.swift */,
 				35D636992059087300F608BB /* PlayerViewController.swift */,
@@ -105,7 +109,6 @@
 				35CB8E81203EB1DF00C26B4F /* Info.plist */,
 				359872862080906000368B40 /* Images.xcassets */,
 				35CB8E75203EB1DF00C26B4F /* art.scnassets */,
-				35C96D1020A045BF002D8603 /* BeforeDoneViewController.swift */,
 			);
 			path = ARWave;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			files = (
 				3598728120807E4700368B40 /* CollectionViewCell.swift in Sources */,
 				3598728320807EE500368B40 /* SelectModelViewController.swift in Sources */,
+				35C96D1320A04E4F002D8603 /* DuringMainViewController.swift in Sources */,
 				355AEFE4209EBAAE00FCD681 /* WelcomeTwoViewController.swift in Sources */,
 				35B661CE207DFAFC00637C77 /* DuringViewController.swift in Sources */,
 				355AEFE8209ED4E100FCD681 /* my_model_bear.mlmodel in Sources */,
