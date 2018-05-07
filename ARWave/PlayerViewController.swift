@@ -1,13 +1,13 @@
+//////
+//////  ViewController.swift
+//////  VRKitExample
+//////
+//////  Created by Leon Lee on 03/14/2018.
+//////  Copyright © 2018 Leon Lee. All rights reserved.
+//////
 ////
-////  ViewController.swift
-////  VRKitExample
-////
-////  Created by Leon Lee on 03/14/2018.
-////  Copyright © 2018 Leon Lee. All rights reserved.
-////
-//
 //import UIKit
-////import OmniVirtSDK
+//import OmniVirtSDK
 //
 //class PlayerViewController: UIViewController, VRPlayerDelegate {
 //
