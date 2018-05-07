@@ -408,13 +408,33 @@ eathquake might strike any second!</string>
                                 <rect key="frame" x="351" y="197" width="36" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A small earthquake just happend!  Secure furniture before another one hits" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ma-tT-TUL">
+                                <rect key="frame" x="0.0" y="51" width="736" height="363"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UYY-JP-4LO">
+                                <rect key="frame" x="339" y="302" width="60" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Play" backgroundImage="buttonBackground">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAction:" destination="BV1-FR-VrT" eventType="touchUpInside" id="qda-oA-ghl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="W2V-Gj-Pwx"/>
                     </view>
                     <connections>
+                        <outlet property="beforeSecureText" destination="1Ma-tT-TUL" id="oa5-td-Qns"/>
                         <outlet property="checkMarkImage" destination="wHN-Se-OQe" id="UsP-3i-uWW"/>
                         <outlet property="messageBox" destination="Ohc-G6-nTR" id="n7w-BB-xdQ"/>
+                        <outlet property="playButton" destination="UYY-JP-4LO" id="tmR-I0-bI0"/>
                         <outlet property="sceneView" destination="XMs-gA-sya" id="uz8-4k-aSX"/>
                         <outlet property="targetButton" destination="fsc-JN-lWZ" id="Czw-td-QVe"/>
                     </connections>
@@ -423,6 +443,82 @@ eathquake might strike any second!</string>
                 <exit id="YfZ-ID-lnb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-788.31521739130437" y="3031.884057971015"/>
+        </scene>
+        <!--BeforeDone-->
+        <scene sceneID="OvN-VR-Jvj">
+            <objects>
+                <viewController storyboardIdentifier="beforedone" id="9y3-0i-a92" userLabel="BeforeDone" customClass="BeforeDoneViewController" customModule="ARWave" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kq5-3T-owK">
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="congrats" translatesAutoresizingMaskIntoConstraints="NO" id="7Kn-W4-4jR">
+                                <rect key="frame" x="0.0" y="54" width="736" height="360"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Before Earthquake: Secure Home" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPW-MU-8qV">
+                                <rect key="frame" x="-3" y="0.0" width="736" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="88I-3s-zfU" userLabel="Home Button">
+                                <rect key="frame" x="687" y="14" width="26" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="house-black-silhouette-without-door"/>
+                                <connections>
+                                    <segue destination="3cX-LI-xhL" kind="unwind" unwindAction="unwindSegue:" id="dmO-uv-30y"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="Q0R-BG-QHd">
+                                <rect key="frame" x="-3" y="54" width="739" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBo-ly-rGV">
+                                <rect key="frame" x="524" y="366" width="94" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Play Again" backgroundImage="buttonBackground2">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAction:" destination="BV1-FR-VrT" eventType="touchUpInside" id="SOe-u3-uSM"/>
+                                    <segue destination="sd2-No-vLg" kind="show" id="xT9-Ky-J9a"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rTi-G1-x7k">
+                                <rect key="frame" x="640" y="366" width="69" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Home" backgroundImage="buttonBackground">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAction:" destination="BV1-FR-VrT" eventType="touchUpInside" id="fuE-NH-2TY"/>
+                                    <segue destination="hFO-6Y-sfD" kind="show" id="cZH-9v-art"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Congratulations!  You've learnt how to secure your furnitures!" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhy-6v-D93">
+                                <rect key="frame" x="31" y="96" width="489" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.27626955509185791" green="0.30052000284194946" blue="0.91644954681396484" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="WZZ-Qn-Gp1"/>
+                    </view>
+                    <connections>
+                        <outlet property="homeButton" destination="rTi-G1-x7k" id="vex-Yz-024"/>
+                        <outlet property="playAgainButton" destination="LBo-ly-rGV" id="JHW-Q9-18a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HRD-MP-soS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="3cX-LI-xhL" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-788.31521739130437" y="3982.6086956521744"/>
         </scene>
         <!--During Welcome-->
         <scene sceneID="Gvb-3m-7Cc">
@@ -846,6 +942,7 @@ recommended action is </string>
         <image name="buttonBackground" width="200" height="400"/>
         <image name="buttonBackground2" width="200" height="400"/>
         <image name="check-mark-black-outline" width="32" height="32"/>
+        <image name="congrats" width="1472" height="828"/>
         <image name="drillBackground" width="1472" height="828"/>
         <image name="exclamation-mark" width="32" height="32"/>
         <image name="house-black-silhouette-without-door" width="64" height="64"/>
@@ -856,4 +953,8 @@ recommended action is </string>
         <image name="shutter" width="48" height="48"/>
         <image name="welcomeBackground" width="1472" height="828"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="xT9-Ky-J9a"/>
+        <segue reference="cZH-9v-art"/>
+    </inferredMetricsTieBreakers>
 </document>

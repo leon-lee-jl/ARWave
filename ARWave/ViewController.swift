@@ -17,6 +17,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     // SCENE
     var placed = Set<String>()
 
+    @IBOutlet weak var beforeSecureText: UILabel!
+    @IBOutlet weak var playButton: UIButton!
     @IBOutlet var sceneView: ARSCNView!
     let bubbleDepth : Float = 0.01 // the 'depth' of 3D text
     var latestPrediction : String = "…" // a variable containing the latest CoreML prediction
@@ -30,12 +32,29 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     var x : CGFloat = 0.0
     var y : CGFloat = 0.0
     var z : CGFloat = 0.0
+    var modelCount: Int = 0
+    var finishPlacing = false
+    var rightAnswer: Int = 0
+    var currentTap = ""
+    let allModels : Set = ["TV", "paintingframe", "bookshelf"]
+    
+    var quiz = [ "bookcase": [["A: Use furniture straps", "B: Use heavy books", "C: No need."], ["explanation 1", "explanation 2", "explanation 3"]],
+                 "TV": [["A: Use TV straps", "B: Use putty", "C: No need."], ["explanation 1", "explanation 2", "explanation 3"]],
+                 "paintingframe": [["A: Use closed hook to secure wall.", "B: Just standard hooks", "C: Use putty"], ["explanation 1", "explanation 2", "explanation 3"]]
+                ]
+    var count = ["bookcase": false,
+                 "TV": false,
+                 "paintingframe": false]
+    
     
     // COREML
     var visionRequests = [VNRequest]()
     let dispatchQueueML = DispatchQueue(label: "com.hw.dispatchqueueml") // A Serial Queue
     override func viewDidLoad() {
         super.viewDidLoad()
+        playButton.layer.cornerRadius = 6
+        beforeSecureText.isHidden = true
+        playButton.isHidden = true
         targetButton.isHidden = true
         messageBox.text = "Scan floor at chest level to record height"
         // Set the view's delegate
@@ -54,6 +73,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Enable Default Lighting - makes the 3D text a bit poppier.
         sceneView.autoenablesDefaultLighting = true
         sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
+        
+        // Add tap guesture
         
         // Set up Vision Model
         guard let selectedModel = try? VNCoreMLModel(for: my_model_bear().model) else { // (Optional) This can be replaced with other models on https://developer.apple.com/machine-learning/
@@ -93,6 +114,22 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Release any cached data, images, etc that aren't in use.
     }
     
+    @objc func handleTap(rec: UITapGestureRecognizer){
+        
+        if rec.state == .ended {
+            let location: CGPoint = rec.location(in: sceneView)
+            let hits = self.sceneView.hitTest(location, options: nil)
+            if !hits.isEmpty{
+                guard let tappedNode = hits.first?.node else {return}
+                if tappedNode.name == nil {
+                    return
+                }
+                self.currentTap = tappedNode.name!
+                self.displayQuiz()
+            }
+        }
+    }
+    
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         if self.isDetecting {
             guard let planeAnchor = anchor as? ARPlaneAnchor else {return}
@@ -117,10 +154,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     
     func placeVirtualObject() {
-        if finishScanning && self.latestProbability >= 0.92 && !placed.contains(self.latestPrediction){
+        if !self.finishPlacing && self.finishScanning && self.latestProbability >= 0.92 && !self.placed.contains(self.latestPrediction) && self.allModels.contains(self.latestPrediction){
             // add node to scnView
             modelNode.position = SCNVector3Make(Float(self.x), Float(self.y), Float(self.z))
-            guard let shipScene = SCNScene(named: "art.scnassets/bookshelf.dae")
+            guard let shipScene = SCNScene(named: "art.scnassets/" + self.latestPrediction + ".dae")
                 else { return }
             let wrapperNode = SCNNode()
             for child in shipScene.rootNode.childNodes {
@@ -129,13 +166,99 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             }
             modelNode.addChildNode(wrapperNode)
             sceneView.scene.rootNode.addChildNode(modelNode)
-            
+            self.modelCount += 1
             // Add placed objects to set
             self.placed.insert(self.latestPrediction)
+        }
+        
+        if self.modelCount == 3 && !self.finishPlacing {
+            self.finishPlacing = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                self.targetButton.isHidden = true
+                self.messageBox.text = "Models created"
+                self.checkMarkImage.isHidden = false
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+                self.messageBox.text = "We identified big objects that need to be secured."
+                self.checkMarkImage.isHidden = true
+            }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+                self.messageBox.isHidden = true
+                self.checkMarkImage.isHidden = true
+                self.beforeSecureText.isHidden = false
+                self.playButton.isHidden = false
+            }
         }
     }
     
     
+    @IBAction func playAction(_ sender: UIButton) {
+        self.beforeSecureText.isHidden = true
+        self.playButton.isHidden = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(rec:)))
+        sceneView.addGestureRecognizer(tap)
+    }
+    
+    func readyToSergue() {
+        if self.count["bookcase"]! && self.count["TV"]! && self.count["paintingframe"]! {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                
+                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "beforedone") as UIViewController
+                self.present(nextViewController, animated:true, completion:nil)
+            }
+        } else {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.messageBox.text = "Continue. Tap other furnitures to secure!"
+                self.messageBox.isHidden = false
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3.2) {
+                self.messageBox.isHidden = true
+            }
+        }
+    }
+    
+    func displayQuiz() {
+        var furniture = self.currentTap
+        if self.currentTap == "Screen" || self.currentTap == "Speakers" || self.currentTap == "LCD" || self.currentTap == "Stand" {
+            furniture = "TV"
+        } else if self.currentTap == "bookshelf" || self.currentTap == "bookcase"{
+            furniture = "bookcase"
+        }
+        let alertController = UIAlertController(title: "How do you secure " + furniture + " ?",
+                                                message: "",
+                                                preferredStyle: .alert)
+        let action1 = UIAlertAction(title: self.quiz[furniture]![0][0], style: .default, handler:{ (action) -> Void in
+            let messageController = UIAlertController(title: "Congratulations!",
+                                                      message: "You make the right choice. " + self.quiz[furniture]![1][0],
+                                                    preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            messageController.addAction(okAction)
+            self.count[furniture] = true
+            self.present(messageController, animated: true, completion: self.readyToSergue)
+        })
+        let action2 = UIAlertAction(title: self.quiz[furniture]![0][1], style: .default, handler:{ (action) -> Void in
+            let messageController = UIAlertController(title: "Try again!",
+                                                      message: self.quiz[furniture]![1][1],
+                                                      preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            messageController.addAction(okAction)
+            self.present(messageController, animated: true, completion: self.displayQuiz)
+        })
+        let action3 = UIAlertAction(title: self.quiz[furniture]![0][2], style: .default, handler:{ (action) -> Void in
+            let messageController = UIAlertController(title: "Try again!",
+                                                      message: self.quiz[furniture]![1][2],
+                                                      preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            messageController.addAction(okAction)
+            self.present(messageController, animated: true, completion: self.displayQuiz)
+        })
+        alertController.addAction(action1)
+        alertController.addAction(action2)
+        alertController.addAction(action3)
+        self.present(alertController, animated: true)
+    }
     
     // MARK: - ARSCNViewDelegate
     
@@ -250,7 +373,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             var objectName:String = "…"
             objectName = classifications.components(separatedBy: "-")[0]
             objectName = objectName.components(separatedBy: ",")[0]
-            self.latestPrediction = objectName
+            self.latestPrediction = objectName.trimmingCharacters(in: .whitespacesAndNewlines)
             self.latestProbability = (classifications.components(separatedBy: "-")[1] as NSString).floatValue
             self.placeVirtualObject()
         }
