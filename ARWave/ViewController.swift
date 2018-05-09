@@ -38,9 +38,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     var currentTap = ""
     let allModels : Set = ["TV", "paintingframe", "bookshelf"]
     
-    var quiz = [ "bookcase": [["A: Use furniture straps", "B: Use heavy books", "C: No need."], ["explanation 1", "explanation 2", "explanation 3"]],
-                 "TV": [["A: Use TV straps", "B: Use putty", "C: No need."], ["explanation 1", "explanation 2", "explanation 3"]],
-                 "paintingframe": [["A: Use closed hook to secure wall.", "B: Just standard hooks", "C: Use putty"], ["explanation 1", "explanation 2", "explanation 3"]]
+    var quiz = [ "bookcase": [["A: Use furniture straps", "B: Use heavy books", "C: No need."], ["Furniture straps will prevent tall furniture from toppling over.", "The ground swells and rolls of an earthquake can cause anything on the shelves to fall.", "Tall pieces of furniture are likely to fall when the ground is rolling and shaking."]],
+                 "TV": [["A: Use TV straps", "B: Use putty", "C: No need."], ["TV straps secure your TV and allow for easy removal/relocation.", "Putty might not be enough to hold your TV during an earthquake.", "TVs resting on shelves or a TV stand are likely to fall when the ground rolls."]],
+                 "paintingframe": [["A: Use closed hook to secure wall.", "B: Just standard hooks", "C: Use putty"], ["A closed hook is the best way to prevent the frame from falling during violent shaking.", "Frames can still shake and fall if hung with standard hooks during a big earthquake.", "Putty might not be enough to hold a frame during the shaking."]]
                 ]
     var count = ["bookcase": false,
                  "TV": false,
@@ -134,7 +134,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         if self.isDetecting {
             guard let planeAnchor = anchor as? ARPlaneAnchor else {return}
             self.x =  CGFloat(planeAnchor.transform.columns.3.x)
-            self.y =  CGFloat(planeAnchor.transform.columns.3.y)
+            self.y =  CGFloat(planeAnchor.transform.columns.3.y + 1.35)
             self.z =  CGFloat(planeAnchor.transform.columns.3.z)
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                 self.messageBox.text = "Height recorded"
@@ -154,8 +154,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     
     func placeVirtualObject() {
+        print(self.latestPrediction, self.latestProbability, self.modelCount, self.placed.contains(self.latestPrediction), self.allModels.contains(self.latestPrediction))
         if !self.finishPlacing && self.finishScanning && self.latestProbability >= 0.92 && !self.placed.contains(self.latestPrediction) && self.allModels.contains(self.latestPrediction){
             // add node to scnView
+            self.modelCount += 1
             modelNode.position = SCNVector3Make(Float(self.x), Float(self.y), Float(self.z))
             guard let shipScene = SCNScene(named: "art.scnassets/" + self.latestPrediction + ".dae")
                 else { return }
@@ -166,7 +168,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             }
             modelNode.addChildNode(wrapperNode)
             sceneView.scene.rootNode.addChildNode(modelNode)
-            self.modelCount += 1
             // Add placed objects to set
             self.placed.insert(self.latestPrediction)
         }

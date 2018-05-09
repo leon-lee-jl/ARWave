@@ -4,8 +4,8 @@
   <contributor>
    <authoring_tool>SceneKit Collada Exporter v1.0</authoring_tool>
   </contributor>
-  <created>2018-05-07T08:59:56Z</created>
-  <modified>2018-05-07T08:59:56Z</modified>
+  <created>2018-05-08T19:48:24Z</created>
+  <modified>2018-05-08T19:48:24Z</modified>
   <unit meter="0.025400"/>
   <up_axis>Y_UP</up_axis>
  </asset>
@@ -251,7 +251,7 @@
  <library_visual_scenes>
   <visual_scene id="scene23">
    <node id="ID47" name="TV">
-    <matrix>-0.008 6.993821e-10 -6.993826e-10 -1.38423e-06 6.993822e-10 0.008 -6.993821e-10 0 6.993824e-10 -6.993822e-10 -0.008 5.39039e-13 0 0 0 1 </matrix>
+    <matrix>0.007 -6.119594e-10 -6.119595e-10 1 6.119594e-10 0.007 6.119594e-10 0 6.119594e-10 -6.119594e-10 0.007 5.39039e-13 0 0 0 1 </matrix>
     <node id="ID48" name="Screen">
      <matrix>1 0 0 0 0 1 0 0 0 0 1 -1.15893e-05 0 0 0 1 </matrix>
      <instance_geometry url="#geometry1">
