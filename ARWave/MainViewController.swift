@@ -17,8 +17,11 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         beforeButton.layer.cornerRadius = 10
+        beforeButton.titleLabel?.textAlignment = NSTextAlignment.center
         duringButton.layer.cornerRadius = 10
+        duringButton.titleLabel?.textAlignment = NSTextAlignment.center
         afterButton.layer.cornerRadius = 10
+        afterButton.titleLabel?.textAlignment = NSTextAlignment.center
         super.viewDidLoad()
     }
     

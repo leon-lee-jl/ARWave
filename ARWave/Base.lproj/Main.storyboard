@@ -774,7 +774,7 @@ recommended action is </string>
                                 <rect key="frame" x="122" y="154" width="120" height="161"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Table is nearby" backgroundImage="buttonBackground">
+                                <state key="normal" title="Table        is nearby" backgroundImage="buttonBackground">
                                     <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -785,6 +785,11 @@ recommended action is </string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="opA-It-WOy"/>
                     </view>
+                    <connections>
+                        <outlet property="everyoneRunningButton" destination="ccl-IM-4RM" id="pJV-n8-aQB"/>
+                        <outlet property="noTableNearByButton" destination="Mco-8g-cWF" id="0S3-9c-jQu"/>
+                        <outlet property="tableNearByButton" destination="eEL-YV-Cu6" id="2Rc-hw-7I5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="svQ-qg-CGu" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="o26-Xj-fqc" userLabel="Exit" sceneMemberID="exit"/>
@@ -1059,7 +1064,7 @@ recommended action is </string>
         <image name="welcomeBackground" width="1472" height="828"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xT9-Ky-J9a"/>
+        <segue reference="hih-Lv-sGK"/>
         <segue reference="cZH-9v-art"/>
     </inferredMetricsTieBreakers>
 </document>

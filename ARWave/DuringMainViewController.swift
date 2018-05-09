@@ -10,9 +10,17 @@ import UIKit
 
 class DuringMainViewController: UIViewController {
 
+    @IBOutlet weak var tableNearByButton: UIButton!
+    @IBOutlet weak var noTableNearByButton: UIButton!
+    @IBOutlet weak var everyoneRunningButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tableNearByButton.layer.cornerRadius = 6
+        tableNearByButton.titleLabel?.textAlignment = NSTextAlignment.center
+        noTableNearByButton.layer.cornerRadius = 6
+        noTableNearByButton.titleLabel?.textAlignment = NSTextAlignment.center
+        everyoneRunningButton.layer.cornerRadius = 6
+        everyoneRunningButton.titleLabel?.textAlignment = NSTextAlignment.center
         // Do any additional setup after loading the view.
     }
 
