@@ -27,7 +27,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">Welcome!
 Are you ready for the next big earthquake?
-Experts predict the next big one will hit before 2045</string>
+Experts predict the next big one will hit before 2045.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="textColor" red="0.27626955509185791" green="0.30052000284194946" blue="0.91644954681396484" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -37,7 +37,7 @@ Experts predict the next big one will hit before 2045</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">If an earthquake strikes, should you run?
 Hide? Find a doorway? Unfortunately, none
-of these are the correct answer</string>
+of these are the correct answers.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="textColor" red="0.27626955509185791" green="0.30052000284194946" blue="0.91644954681396484" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -47,13 +47,13 @@ of these are the correct answer</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">Find out what you should do from our
 interactive guide. But hurry! The next
-eathquake might strike any second!</string>
+eathquake might strike at any second!</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="textColor" red="0.27626955509185791" green="0.30052000284194946" blue="0.91644954681396484" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1iF-4s-7Uj">
-                                <rect key="frame" x="385" y="318" width="60" height="29"/>
+                                <rect key="frame" x="393" y="318" width="60" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Next" backgroundImage="buttonBackground">
@@ -183,7 +183,7 @@ eathquake might strike any second!</string>
                                 <rect key="frame" x="153" y="165" width="120" height="161"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Earthquake Drils" backgroundImage="buttonBackground">
+                                <state key="normal" title="Earthquake Drills" backgroundImage="buttonBackground">
                                     <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -222,8 +222,8 @@ eathquake might strike any second!</string>
                                     <segue destination="iMJ-Sr-DUs" kind="show" id="IZR-yr-vzy"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Comming soon" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHo-is-d1J">
-                                <rect key="frame" x="522" y="283" width="54" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Coming soon" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHo-is-d1J">
+                                <rect key="frame" x="532" y="283" width="44" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -243,44 +243,10 @@ eathquake might strike any second!</string>
             </objects>
             <point key="canvasLocation" x="107.60869565217392" y="1131.8840579710145"/>
         </scene>
-        <!--Player-->
-        <scene sceneID="Xml-jc-ttG">
-            <objects>
-                <viewController title="Player" id="Jfs-hJ-2jQ" customClass="PlayerViewController" customModule="ARWave" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="NYz-Qf-lrH">
-                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Htj-Al-84p" customClass="VRPlayer" customModule="OmniVirtSDK">
-                                <rect key="frame" x="0.0" y="42" width="736" height="372"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RcU-uq-icZ">
-                                <rect key="frame" x="20" y="14" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back"/>
-                                <connections>
-                                    <segue destination="b0S-6o-jSY" kind="unwind" unwindAction="unwindSegue:" id="jI3-vX-k8J"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Kvj-MG-cVe"/>
-                    </view>
-                    <connections>
-                        <outlet property="player" destination="Htj-Al-84p" id="9N5-4N-UlF"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xjT-Pl-ja6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="b0S-6o-jSY" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="1065" y="-671"/>
-        </scene>
-        <!--View Controller-->
+        <!--Player View Controller-->
         <scene sceneID="pMv-Rs-fzf">
             <objects>
-                <viewController id="iMJ-Sr-DUs" sceneMemberID="viewController">
+                <viewController id="iMJ-Sr-DUs" customClass="PlayerViewController" customModule="ARWave" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qrZ-eW-3Bj">
                         <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -297,6 +263,7 @@ eathquake might strike any second!</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="house-black-silhouette-without-door"/>
                                 <connections>
+                                    <action selector="homeButton:" destination="iMJ-Sr-DUs" eventType="touchUpInside" id="Waj-MC-z4P"/>
                                     <segue destination="Ohe-I1-oal" kind="unwind" unwindAction="unwindSegue:" id="lU6-BQ-xPG"/>
                                 </connections>
                             </button>
@@ -309,18 +276,27 @@ eathquake might strike any second!</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="left-arrow-chevron"/>
                                 <connections>
+                                    <action selector="backButton:" destination="iMJ-Sr-DUs" eventType="touchUpInside" id="iqu-uU-lLd"/>
                                     <segue destination="Ohe-I1-oal" kind="unwind" unwindAction="unwindSegue:" id="KQM-yb-UJT"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SIn-b0-tTm" customClass="VRPlayer" customModule="OmniVirtSDK">
+                                <rect key="frame" x="0.0" y="56" width="736" height="358"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="jnV-8I-vrz"/>
                     </view>
+                    <connections>
+                        <outlet property="player" destination="SIn-b0-tTm" id="e9I-0P-5Ho"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qH7-Kk-3wC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Ohe-I1-oal" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-736" y="1072"/>
+            <point key="canvasLocation" x="-736.14130434782612" y="1071.0144927536232"/>
         </scene>
         <!--BeforeWelcome-->
         <scene sceneID="hwr-Jh-UdQ">
@@ -1065,6 +1041,6 @@ recommended action is </string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="hih-Lv-sGK"/>
-        <segue reference="cZH-9v-art"/>
+        <segue reference="p7H-kc-HQF"/>
     </inferredMetricsTieBreakers>
 </document>

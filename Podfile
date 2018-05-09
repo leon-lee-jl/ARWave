@@ -6,6 +6,6 @@ pod "ImageSlideshow/Alamofire"
 pod "ImageSlideshow/SDWebImage"
 pod "ImageSlideshow/Kingfisher"
 pod 'JJFloatingActionButton'
-#pod 'OmniVirtSDK'
+pod 'OmniVirtSDK'
 use_frameworks!
 end
