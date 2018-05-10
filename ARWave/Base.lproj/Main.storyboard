@@ -64,14 +64,6 @@ eathquake might strike at any second!</string>
                                     <segue destination="Yps-21-Ugu" kind="show" id="OSX-3g-0Re"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8V-Di-DHS">
-                                <rect key="frame" x="623" y="310" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Debug"/>
-                                <connections>
-                                    <segue destination="hFO-6Y-sfD" kind="show" id="p7H-kc-HQF"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="XCw-DN-wTG"/>
@@ -1041,6 +1033,5 @@ recommended action is </string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="hih-Lv-sGK"/>
-        <segue reference="p7H-kc-HQF"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -12,11 +12,11 @@ class SelectModelViewController: UIViewController, UICollectionViewDelegate, UIC
 
     var currentModel = ""
     @IBOutlet weak var collectionView: UICollectionView!
-    let models = [ "TeddyBear", "Face", "Doraemon"]
+    let models = [ "TeddyBear", "Face", "Pokemon"]
     let modelImages: [UIImage] = [
         UIImage(named: "TeddyBear")!,
         UIImage(named: "Face")!,
-        UIImage(named: "Doraemon")!,
+        UIImage(named: "Pokemon")!,
         ]
     
     override func viewDidLoad() {
