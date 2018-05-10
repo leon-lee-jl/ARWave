@@ -179,15 +179,19 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 self.messageBox.text = "Models created"
                 self.checkMarkImage.isHidden = false
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
                 self.messageBox.text = "We identified big objects that need to be secured."
                 self.checkMarkImage.isHidden = true
             }
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
                 self.messageBox.isHidden = true
                 self.checkMarkImage.isHidden = true
                 self.beforeSecureText.isHidden = false
+            }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 14) {
+                self.beforeSecureText.text = "Step back to see the models."
                 self.playButton.isHidden = false
             }
         }
